@@ -71,3 +71,9 @@ def clear_session_state() -> None:
     """
     for key in st.session_state.keys():
         del st.session_state[key]
+
+
+def setup_session_state() -> None:
+    """
+    Set all keys needed for ship register application
+    """
