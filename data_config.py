@@ -20,3 +20,42 @@ nations_order_dict = {
 }
 
 type_option_list = ["standard", "elite", "premium", "spezial"]
+
+class_order_dict = {
+    "U-Boot": 1,
+    "Zerstörer": 2,
+    "Kreuzer": 3,
+    "Schlachtschiff": 4,
+    "Flugzeugträger": 5,
+}
+
+tier_order_dict = {
+    "I": 1,
+    "II": 2,
+    "III": 3,
+    "IV": 4,
+    "V": 5,
+    "VI": 6,
+    "VII": 7,
+    "VIII": 8,
+    "IX": 9,
+    "X": 10,
+    "XI": 11,
+}
+
+# Hauptfelder des Schiffsregisters
+main_columns = ["Nation", "Typ", "Klasse", "Stufe", "Name"]
+
+# Felder zur Sortierung
+order_value_columns = [
+    "Ordnungswert_Nation",
+    "Ordnungswert_Klasse",
+    "Ordnungswert_Stufe",
+]
+
+sort_field_order = [
+    "Ordnungswert_Nation",
+    "Ordnungswert_Stufe",
+    "Ordnungswert_Klasse",
+    "Name",
+]
