@@ -53,6 +53,7 @@ order_value_columns = [
     "Ordnungswert_Stufe",
 ]
 
+# Sortierreihenfolge
 sort_field_order = [
     "Ordnungswert_Nation",
     "Ordnungswert_Stufe",
