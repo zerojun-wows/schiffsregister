@@ -2,6 +2,14 @@
 Schiffsregister beginnt mit dieser Datei
 """
 import streamlit as st
+from data_config import clear_session_state, setup_session_state
+
+
+def reset_ship_register() -> None:
+    """
+    Neues Schiffsregister ermöglichen durch Entfernung aller Werte aus dem
+    session_state und neu setzen der benötigten Variablen im session_state
+    """
 
 
 def main():
