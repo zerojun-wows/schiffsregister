@@ -7,9 +7,9 @@ import streamlit as st
 def main():
     st.title("Schiffsregister")
 
-    st.header("Neues oder bestehendes Schiffsregister")
+    st.header("A. Neues oder bestehendes Schiffsregister")
 
-    st.header("Aktueller Schiffsbestand")
+    st.header("B. Aktueller Schiffsbestand")
 
     st.subheader("Zugänge")
 
@@ -17,7 +17,7 @@ def main():
 
     st.subheader("Abgänge")
 
-    st.header("Registerbearbeitung")
+    st.header("C. Registerbearbeitung")
 
     st.subheader("Schiff hinzufügen")
 
