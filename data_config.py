@@ -53,6 +53,9 @@ order_value_columns = [
     "Ordnungswert_Stufe",
 ]
 
+# Alle Spalten
+all_columns = main_columns + order_value_columns
+
 # Sortierreihenfolge
 sort_field_order = [
     "Ordnungswert_Nation",
@@ -60,3 +63,11 @@ sort_field_order = [
     "Ordnungswert_Klasse",
     "Name",
 ]
+
+
+def clear_session_state() -> None:
+    """
+    Removes all keys and values from session_state
+    """
+    for key in st.session_state.keys():
+        del st.session_state[key]
