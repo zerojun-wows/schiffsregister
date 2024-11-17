@@ -10,6 +10,8 @@ def reset_ship_register() -> None:
     Neues Schiffsregister ermöglichen durch Entfernung aller Werte aus dem
     session_state und neu setzen der benötigten Variablen im session_state
     """
+    clear_session_state()
+    setup_session_state()
 
 
 def main():
