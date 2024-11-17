@@ -5,6 +5,9 @@ import streamlit as st
 
 
 def main():
+    """
+    Startpunkt der Schiffsregisteranwendung
+    """
     st.title("Schiffsregister")
 
     st.header("A. Neues oder bestehendes Schiffsregister")
