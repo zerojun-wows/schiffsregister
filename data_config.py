@@ -77,3 +77,10 @@ def setup_session_state() -> None:
     """
     Set all keys needed for ship register application
     """
+    # Ausgangsregister zur Ermittlung von Veränderungen
+    if "schiffsregister_original" not in st.session_state:
+        st.session_state.schiffsregister_original = []
+
+    # Aktuelles Schiffsregister (Änderungen erfolgen hier)
+    if "schiffsregister_aktuell" not in st.session_state:
+        st.session_state.schiffsregister_aktuell = []
