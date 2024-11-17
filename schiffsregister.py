@@ -12,6 +12,9 @@ def main():
 
     st.header("A. Neues oder bestehendes Schiffsregister")
 
+    if st.button("Neues Schiffsregister"):
+        reset_ship_register()
+
     st.header("B. Aktueller Schiffsbestand")
 
     st.subheader("B.I Zugänge")
