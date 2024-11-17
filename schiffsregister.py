@@ -19,7 +19,7 @@ def main():
 
     st.header("C. Registerbearbeitung")
 
-    st.subheader("C.I chiff hinzufügen")
+    st.subheader("C.I Schiff hinzufügen")
 
     st.subheader("C.II Schiff bearbeiten")
 
