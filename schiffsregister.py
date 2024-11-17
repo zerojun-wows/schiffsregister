@@ -25,7 +25,7 @@ def main():
     if st.button("Neues Schiffsregister"):
         reset_ship_register()
 
-    if "schiffsregister" not in st.session_state:
+    if "schiffsregister_aktuell" not in st.session_state:
         return
 
     st.header("B. Aktueller Schiffsbestand")
