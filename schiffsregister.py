@@ -81,19 +81,19 @@ def main():
 
     st.header("B. Aktueller Schiffsbestand", "aktueller-schiffsbestand")
 
-    st.subheader("B.I Zugänge")
+    st.subheader("B.I Zugänge", "zugaenge")
 
-    st.subheader("B.II Änderungen")
+    st.subheader("B.II Änderungen", "aenderungen")
 
-    st.subheader("B.III Abgänge")
+    st.subheader("B.III Abgänge", "abgaenge")
 
     st.header("C. Registerbearbeitung", False)
 
-    st.subheader("C.I Schiff hinzufügen")
+    st.subheader("C.I Schiff hinzufügen", "hinzufuegen")
 
-    st.subheader("C.II Schiff bearbeiten")
+    st.subheader("C.II Schiff bearbeiten", "bearbeiten")
 
-    st.subheader("C.III Schiff entfernen")
+    st.subheader("C.III Schiff entfernen", "entfernen")
 
 
 if __name__ == "__main__":
