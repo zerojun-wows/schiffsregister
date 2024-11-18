@@ -84,3 +84,7 @@ def setup_session_state() -> None:
     # Aktuelles Schiffsregister (Änderungen erfolgen hier)
     if "schiffsregister_aktuell" not in st.session_state:
         st.session_state.schiffsregister_aktuell = []
+
+    # Datei hash der zuletzt hochgeladenen Datei
+    if "last_uploaded_file_hash" not in st.session_state:
+        st.session_state.last_uploaded_file_hash = ""
