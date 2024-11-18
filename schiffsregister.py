@@ -95,6 +95,8 @@ def main():
 
     st.subheader("C.III Schiff entfernen", "entfernen")
 
+    st.write(st.session_state)
+
 
 if __name__ == "__main__":
     main()
