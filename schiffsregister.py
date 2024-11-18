@@ -85,9 +85,15 @@ def main():
 
     st.subheader("B.I Zugänge", "zugaenge")
 
+    placeholder_zugaenge = st.empty()
+
     st.subheader("B.II Änderungen", "aenderungen")
 
+    placeholder_aenderungen = st.empty()
+
     st.subheader("B.III Abgänge", "abgaenge")
+
+    placeholder_abgaenge = st.empty()
 
     st.header("C. Registerbearbeitung", False)
 
