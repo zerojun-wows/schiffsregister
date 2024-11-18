@@ -87,7 +87,7 @@ def main():
 
     st.subheader("B.III Abgänge")
 
-    st.header("C. Registerbearbeitung")
+    st.header("C. Registerbearbeitung", False)
 
     st.subheader("C.I Schiff hinzufügen")
 
