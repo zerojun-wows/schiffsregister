@@ -81,6 +81,8 @@ def main():
 
     st.header("B. Aktueller Schiffsbestand", "aktueller-schiffsbestand")
 
+    placeholder_schiffsbestand_aktuell = st.empty()
+
     st.subheader("B.I Zugänge", "zugaenge")
 
     st.subheader("B.II Änderungen", "aenderungen")
