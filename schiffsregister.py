@@ -65,7 +65,9 @@ def main():
     """
     Startpunkt der Schiffsregisteranwendung
     """
-    setup_session_state()
+    st.set_page_config(page_title="ML App", page_icon=":robot_face:")
+
+    # setup_session_state()
 
     st.title("Schiffsregister")
 
