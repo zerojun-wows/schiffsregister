@@ -8,6 +8,9 @@ import streamlit as st
 from data_config import clear_session_state, setup_session_state
 
 
+st.set_page_config(page_title="Schiffsregister", page_icon=":robot_face:")
+
+
 def reset_ship_register() -> None:
     """
     Neues Schiffsregister ermöglichen durch Entfernung aller Werte aus dem
@@ -65,7 +68,6 @@ def main():
     """
     Startpunkt der Schiffsregisteranwendung
     """
-    st.set_page_config(page_title="Schiffsregister", page_icon=":robot_face:")
 
     # setup_session_state()
 
