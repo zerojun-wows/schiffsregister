@@ -7,6 +7,8 @@ import streamlit as st
 
 from data_config import clear_session_state, setup_session_state
 
+pages = {}
+
 
 st.set_page_config(page_title="Schiffsregister", page_icon=":robot_face:")
 
