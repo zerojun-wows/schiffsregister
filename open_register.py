@@ -17,12 +17,12 @@ st.write(
 )
 
 if st.button("Neues Schiffsregister eröffnen"):
-    if not is_session_state_empty:
+    if not is_session_state_empty():
         st.warning("Ein Schiffsregister ist bereits geöffnet")
         override_request = st.radio(
             "Wollen Sie das bestehende Schiffsregister überschreiben?",
             ["Nein", "Ja"],
-            caption=[
+            captions=[
                 "Es wird kein neues Schiffsregister eröffnet",
                 "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
             ],
