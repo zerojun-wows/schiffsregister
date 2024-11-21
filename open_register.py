@@ -50,3 +50,4 @@ if st.button("Neues Schiffsregister eröffnen"):
         )
 
 st.write(st.session_state)
+st.write(is_session_state_empty())
