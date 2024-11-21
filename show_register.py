@@ -18,4 +18,16 @@ if current_ship_register_df.empty:
 else:
     st.dataframe(current_ship_register_df)
 
+st.subheader("Zugänge")
+
+# additions
+
+st subheader("Änderungen")
+
+# modifications
+
+st.subheader("Abgänge")
+
+# removals
+
 st.write(st.session_state)
