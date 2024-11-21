@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("Schiffsregisteransicht")
+st.title("Schiffsregister - Ansicht")
