@@ -21,10 +21,12 @@ else:
 st.subheader("Zugänge")
 
 # additions
+st.info("Keine Zugänge vorhanden", icon=":material/info:")
 
 st.subheader("Änderungen")
 
 # modifications
+st.info("Keine Änderungen vorhanden", icon=":material/info:")
 
 st.subheader("Abgänge")
 
