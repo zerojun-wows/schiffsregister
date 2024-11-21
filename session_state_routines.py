@@ -13,7 +13,6 @@ def is_session_state_empty() -> bool:
         bool:
             - `True` if the session state is empty.
             - `False` if the session state contains any data.
-
     """
     if len(st.is_session_state_empty) == 0:
         return True
