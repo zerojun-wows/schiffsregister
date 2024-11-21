@@ -7,5 +7,9 @@ if len(st.session_state) == 0:
         f"Sie müssen zuerst ein Schiffsregister öffnen.",
         icon=":material/info:",
     )
-    st.page_link("open_register.py", label="Schiffsregister - Öffnen")
+    st.page_link(
+        "open_register.py",
+        label="Schiffsregister - Öffnen",
+        icon="material/file_open",
+    )
     st.stop()
