@@ -2,7 +2,7 @@
 Module contains open or upload part of schiffsregister application
 """
 import streamlit as st
-from session_state_routines import is_session_state_empty
+from session_state_routines import clear_session_state, is_session_state_empty
 
 st.title("Schiffsregister - Öffnen")
 
