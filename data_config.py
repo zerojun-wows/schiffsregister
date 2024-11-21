@@ -63,28 +63,3 @@ sort_field_order = [
     "Ordnungswert_Klasse",
     "Name",
 ]
-
-
-def clear_session_state() -> None:
-    """
-    Removes all keys and values from session_state
-    """
-    for key in st.session_state.keys():
-        del st.session_state[key]
-
-
-def setup_session_state() -> None:
-    """
-    Set all keys needed for ship register application
-    """
-    # Ausgangsregister zur Ermittlung von Veränderungen
-    if "schiffsregister_original" not in st.session_state:
-        st.session_state.schiffsregister_original = []
-
-    # Aktuelles Schiffsregister (Änderungen erfolgen hier)
-    if "schiffsregister_aktuell" not in st.session_state:
-        st.session_state.schiffsregister_aktuell = []
-
-    # Datei hash der zuletzt hochgeladenen Datei
-    if "last_uploaded_file_hash" not in st.session_state:
-        st.session_state.last_uploaded_file_hash = ""
