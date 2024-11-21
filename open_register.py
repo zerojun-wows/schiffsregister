@@ -23,12 +23,12 @@ if st.button("Neues Schiffsregister eröffnen"):
             # session_state löschen
             # variablen im Session_state setzen
         else
-            st.info(
-                "Kein neues Schiffsregister eröffnet.",
-                icon=":material/info:",
+            info_str = (
+                "Kein neues Schiffsregister eröffnet."
+                "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."
             )
             st.info(
-                "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden.",
+                info_str,    
                 icon=":material/info:",
             )
 
