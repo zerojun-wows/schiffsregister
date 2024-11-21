@@ -19,10 +19,6 @@ if st.button("Neues Schiffsregister eröffnen"):
                 "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",
             ],
         )
-    # Bei vorhanden Daten sicherheitsabfrage
-    # clear session_state
-    # set session_state variables
-    pass
 
 
 st.write(st.session_state)
