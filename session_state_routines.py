@@ -27,3 +27,7 @@ def is_session_state_empty() -> bool:
     if len(st.is_session_state_empty) == 0:
         return True
     return False
+
+
+def setup_session_state() -> None:
+    pass
