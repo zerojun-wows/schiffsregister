@@ -33,6 +33,11 @@ def check_register_open() -> None:
         st.stop()
 
 
+def clear_session_state() -> None:
+    for key in st.session_state.keys():
+        del st.session_state[key]
+
+
 def is_session_state_empty() -> bool:
     """
     Checks if the Streamlit session state is empty.
