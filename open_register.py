@@ -27,13 +27,7 @@ if st.button("Neues Schiffsregister eröffnen"):
                 "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
             ],
         )
-        if override_request == "Ja":
-            clear_session_state()
-            setup_session_state()
-            st.success(
-                "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
-            )
-        else:
+        if override_request == "Nein":
             INFO_STR = (
                 "Kein neues Schiffsregister eröffnet."
                 "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."  # noqa: E501
