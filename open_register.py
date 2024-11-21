@@ -42,6 +42,11 @@ if st.button("Neues Schiffsregister eröffnen"):
                 INFO_STR,
                 icon=":material/info:",
             )
-
+    else:
+        clear_session_state()
+        setup_session_state()
+        st.success(
+            "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
+        )
 
 st.write(st.session_state)
