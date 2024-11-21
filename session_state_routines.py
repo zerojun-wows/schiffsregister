@@ -24,7 +24,7 @@ def clear_session_state() -> None:
 
 
 def is_session_state_empty() -> bool:
-    if len(is_session_state_empty) == 0:
+    if len(st.session_state) == 0:
         return True
     return False
 
