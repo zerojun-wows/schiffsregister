@@ -1,5 +1,6 @@
 """
-Dieses Modul enthält die Daten und Strukturkonfigurationen des Schiffsregisters
+This module contains neccessary data and structure information for 
+schiffsregister app
 """
 import streamlit as st
 
