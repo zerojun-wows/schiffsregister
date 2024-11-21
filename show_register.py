@@ -13,4 +13,6 @@ st.subheader("Aktueller Bestand")
 
 current_ship_register_df = get_current_ship_register_dataframe()
 
+st.dataframe(current_ship_register_df)
+
 st.write(st.session_state)
