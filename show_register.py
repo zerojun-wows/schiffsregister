@@ -22,7 +22,7 @@ st.subheader("Zugänge")
 
 # additions
 
-st subheader("Änderungen")
+st.subheader("Änderungen")
 
 # modifications
 
