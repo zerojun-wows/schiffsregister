@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Schiffsregister - Ansicht")
 
 if len(st.session_state) == 0:
-        st.info(
+    st.info(
         f"Sie müssen zuerst ein Schiffsregister öffnen.",
         icon=":material/info:",
     )
