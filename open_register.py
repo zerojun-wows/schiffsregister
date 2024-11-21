@@ -2,7 +2,12 @@
 Module contains open or upload part of schiffsregister application
 """
 import streamlit as st
-from session_state_routines import clear_session_state, is_session_state_empty
+from session_state_routines import (
+    clear_session_state,
+    is_session_state_empty,
+    setup_session_state,
+)
+
 
 st.title("Schiffsregister - Öffnen")
 
@@ -23,8 +28,8 @@ if st.button("Neues Schiffsregister eröffnen"):
             ],
         )
         if override_request == "Ja":
-            # session_state löschen
-            # variablen im Session_state setzen
+            clear_session_state()
+
             pass
         else:
             INFO_STR = (
