@@ -1,7 +1,9 @@
 """
 THis module contains interaction routines with st.session_state 
 """
+import pandas as pd
 import streamlit as st
+from data_config import all_columns
 
 
 def check_register_open() -> None:
@@ -26,6 +28,7 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 def get_current_ship_register_dataframe() -> pd.DataFrame:
+    return pd.DataFrame(st.session_state.ship_register_current, columns=)
 
 
 def is_session_state_empty() -> bool:
