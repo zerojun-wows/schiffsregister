@@ -5,7 +5,7 @@ import streamlit as st
 
 
 def check_register_open() -> None:
-    if is_session_state_empty:
+    if is_session_state_empty():
         st.info(
             "Sie müssen zuerst ein Schiffsregister öffnen.",
             icon=":material/info:",
