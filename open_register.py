@@ -29,8 +29,10 @@ if st.button("Neues Schiffsregister eröffnen"):
         )
         if override_request == "Ja":
             clear_session_state()
-
-            pass
+            setup_session_state()
+            st.success(
+                "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
+            )
         else:
             INFO_STR = (
                 "Kein neues Schiffsregister eröffnet."
