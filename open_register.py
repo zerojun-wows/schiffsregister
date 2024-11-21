@@ -22,13 +22,14 @@ if st.button("Neues Schiffsregister eröffnen"):
         if override_request == "Ja":
             # session_state löschen
             # variablen im Session_state setzen
-        else
+            pass
+        else:
             info_str = (
                 "Kein neues Schiffsregister eröffnet."
                 "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."
             )
             st.info(
-                info_str,    
+                info_str,
                 icon=":material/info:",
             )
 
