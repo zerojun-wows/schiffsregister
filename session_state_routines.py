@@ -22,10 +22,6 @@ def check_register_open() -> None:
 
     Raises:
         Streamlit stops the application execution using `st.stop()` if the session state is empty.
-
-    Example:
-        >>> check_register_open()
-        # If the session state is empty, an informational message is shown, and the app stops.
     """
     if is_session_state_empty:
         st.info(
