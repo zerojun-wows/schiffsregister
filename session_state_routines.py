@@ -30,4 +30,8 @@ def is_session_state_empty() -> bool:
 
 
 def setup_session_state() -> None:
-    pass
+    if "ship_register_original" not in st.session_state:
+        st.session_state.ship_register_original = []
+
+    if "ship_register_current" not in st.session_state:
+        st.session_state.ship_register_current = []
