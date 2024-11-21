@@ -7,16 +7,6 @@ import streamlit as st
 
 from data_config import clear_session_state, setup_session_state
 
-pages = {
-    "Schiffsregister" = [
-        st.Page("", title="Ansehen"),
-        st.Page("", title="Eröffnen"),
-        st.Page("", title="Ausgaben/Export")
-    ],
-}
-
-pg = st.navigation(pages)
-pg.run()
 
 st.set_page_config(page_title="Schiffsregister")
 
