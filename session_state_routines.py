@@ -2,6 +2,19 @@ import streamlit as st
 
 
 def is_session_state_empty() -> bool:
+    """
+    Checks if the Streamlit session state is empty.
+
+    This function determines whether the current Streamlit session state
+    contains any data. If the session state is empty (i.e., its length is 0),
+    the function returns `True`. Otherwise, it returns `False`.
+
+    Returns:
+        bool:
+            - `True` if the session state is empty.
+            - `False` if the session state contains any data.
+
+    """
     if len(st.is_session_state_empty) == 0:
         return True
     return False
