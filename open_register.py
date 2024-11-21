@@ -16,7 +16,7 @@ if st.button("Neues Schiffsregister eröffnen"):
             ["Nein", "Ja"],
             caption=[
                 "Es wird kein neues Schiffsregister eröffnet",
-                "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",
+                "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
             ],
         )
         if override_request == "Ja":
@@ -26,7 +26,7 @@ if st.button("Neues Schiffsregister eröffnen"):
         else:
             INFO_STR = (
                 "Kein neues Schiffsregister eröffnet."
-                "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."
+                "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."  # noqa: E501
             )
             st.info(
                 INFO_STR,
