@@ -19,8 +19,13 @@ def check_register_open() -> None:
 
 
 def clear_session_state() -> None:
+    """
+    Removes all keys and values from session_state
+    """
     for key in st.session_state.keys():
         del st.session_state[key]
+
+def get_current_ship_register_dataframe() -> pd.DataFrame:
 
 
 def is_session_state_empty() -> bool:
