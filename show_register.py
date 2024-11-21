@@ -31,5 +31,6 @@ st.info("Keine Änderungen vorhanden", icon=":material/info:")
 st.subheader("Abgänge")
 
 # removals
+st.info("Keine Abgänge vorhanden", icon=":material/info:")
 
 st.write(st.session_state)
