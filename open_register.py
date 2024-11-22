@@ -31,12 +31,19 @@ if not is_session_state_empty():
     if override_request == "Ja":
         if st.button("Schiffregister entfernen und Neues eröffnen"):
             clear_session_state()
+            setup_session_state()
+            st.success(
+                "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
+            )
+else:
+    if st.button("Neues Schiffsregister eröffnen"):
+        clear_session_state()
         setup_session_state()
         st.success(
             "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
         )
 """
-if st.button("Neues Schiffsregister eröffnen"):
+
     set_register_open_success(False)
     if not is_session_state_empty():
         if override_request == "Nein":
