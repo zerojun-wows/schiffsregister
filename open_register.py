@@ -45,4 +45,3 @@ else:
         )
 
 st.write(st.session_state)
-st.write(is_session_state_empty())
