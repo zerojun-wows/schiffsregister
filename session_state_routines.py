@@ -46,6 +46,10 @@ def is_session_state_empty() -> bool:
     return False
 
 
+def set_register_open_success(value: bool) -> None:
+    st.clear_session_state.register_open_success = value
+
+
 def setup_session_state() -> None:
     if "ship_register_original" not in st.session_state:
         st.session_state.ship_register_original = []
@@ -61,3 +65,6 @@ def setup_session_state() -> None:
 
     if "removals_id_list" not in st.session_state:
         st.session_state.removals_id_list = []
+
+    if "register_open_success" not in st.session_state:
+        st.session_state.register_open_success = False
