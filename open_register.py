@@ -36,6 +36,8 @@ if st.button("Neues Schiffsregister eröffnen"):
                 INFO_STR,
                 icon=":material/info:",
             )
+        else:
+            st.info("Test")
     else:
         clear_session_state()
         setup_session_state()
