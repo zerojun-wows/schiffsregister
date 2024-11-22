@@ -6,6 +6,7 @@ from session_state_routines import (
     clear_session_state,
     is_session_state_empty,
     setup_session_state,
+    is_register_open_success,
     set_register_open_success,
 )
 
@@ -41,12 +42,12 @@ if st.button("Neues Schiffsregister eröffnen"):
         else:
             st.write("TEEST")
     else:
-        st.write("Else 1")
+
         clear_session_state()
         setup_session_state()
         st.success(
             "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
         )
-
+if is
 st.write(st.session_state)
 st.write(is_session_state_empty())
