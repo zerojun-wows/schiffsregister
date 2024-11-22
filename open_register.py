@@ -62,5 +62,6 @@ else:
             icon=":material/news:",
         )
 
-uploaded_file = st.file_uploader()
+uploaded_file = st.file_uploader("Bestehendes Schiffsregister laden")
+
 st.write(st.session_state)
