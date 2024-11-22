@@ -52,5 +52,10 @@ else:
             ),
             icon=":material/check_circle:",
         )
+        st.page_link(
+            "show_register.py",
+            label="Schiffsregister - Ansehen",
+            icon=":material/news:",
+        )
 
 st.write(st.session_state)
