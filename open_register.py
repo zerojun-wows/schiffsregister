@@ -40,16 +40,13 @@ if st.button("Neues Schiffsregister eröffnen"):
                 icon=":material/info:",
             )
         else:
-            clear_session_state()
-            setup_session_state()
             set_register_open_success(True)
-
     else:
-        clear_session_state()
-        setup_session_state()
         set_register_open_success(True)
 
 if is_register_open_success():
+    clear_session_state()
+    setup_session_state()
     st.success("Neues Schiffsregister eröffnet", icon=":material/check_circle:")
 
 st.write(st.session_state)
