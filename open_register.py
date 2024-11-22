@@ -36,6 +36,11 @@ if not is_session_state_empty():
             st.success(
                 "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
             )
+            st.page_link(
+                "show_register.py",
+                label="Schiffsregister - Ansehen",
+                icon=":material/news:",
+            )
 else:
     if st.button("Neues Schiffsregister eröffnen"):
         clear_session_state()
