@@ -34,6 +34,12 @@ def get_current_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def get_original_ship_register_dataframe() -> pd.DataFrame:
+    return pd.DataFrame(
+        st.session_state.ship_register_original, columns=all_columns
+    )
+
+
 def is_session_state_empty() -> bool:
     if len(st.session_state) == 0:
         return True
