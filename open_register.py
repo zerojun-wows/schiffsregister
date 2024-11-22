@@ -38,8 +38,8 @@ if st.button("Neues Schiffsregister eröffnen"):
                 INFO_STR,
                 icon=":material/info:",
             )
-         else:
-            st.write("TEEST")   
+        else:
+            st.write("TEEST")
     else:
         st.write("Else 1")
         clear_session_state()
