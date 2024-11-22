@@ -52,11 +52,11 @@ if st.button("Neues Schiffsregister eröffnen"):
             set_register_open_success(True)
     else:
         set_register_open_success(True)
-"""
+
 if is_register_open_success():
     clear_session_state()
     setup_session_state()
     st.success("Neues Schiffsregister eröffnet", icon=":material/check_circle:")
-
+"""
 st.write(st.session_state)
 st.write(is_session_state_empty())
