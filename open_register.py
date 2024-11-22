@@ -19,6 +19,7 @@ st.write(
 )
 
 if st.button("Neues Schiffsregister eröffnen"):
+    set_register_open_success(False)
     if not is_session_state_empty():
         st.warning("Ein Schiffsregister ist bereits geöffnet")
         override_request = st.radio(
@@ -44,6 +45,7 @@ if st.button("Neues Schiffsregister eröffnen"):
     else:
         clear_session_state()
         setup_session_state()
+        set_register_open_success(True)
 
 if is_register_open_success:
     st.success("Neues Schiffsregister eröffnet", icon=":material/check_circle:")
