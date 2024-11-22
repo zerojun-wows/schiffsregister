@@ -28,6 +28,8 @@ if not is_session_state_empty():
             "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
         ],
     )
+    if override_request == "Ja":
+        st.button("Test")
 
 if st.button("Neues Schiffsregister eröffnen"):
     set_register_open_success(False)
