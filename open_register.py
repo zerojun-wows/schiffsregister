@@ -6,6 +6,7 @@ from session_state_routines import (
     clear_session_state,
     is_session_state_empty,
     setup_session_state,
+    set_register_open_success,
 )
 
 
@@ -28,6 +29,7 @@ if st.button("Neues Schiffsregister eröffnen"):
             ],
         )
         if override_request == "Nein":
+            s
             INFO_STR = (
                 "Kein neues Schiffsregister eröffnet."
                 "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."  # noqa: E501
