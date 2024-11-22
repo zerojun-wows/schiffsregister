@@ -23,6 +23,7 @@ if not is_session_state_empty():
     override_request = st.radio(
         "Wollen Sie das bestehende Schiffsregister überschreiben?",
         ["Nein", "Ja"],
+        index=None,
         captions=[
             "Es wird kein neues Schiffsregister eröffnet",
             "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
@@ -42,28 +43,6 @@ else:
         st.success(
             "Neues Schiffsregister eröffnet", icon=":material/check_circle:"
         )
-"""
 
-    set_register_open_success(False)
-    if not is_session_state_empty():
-        if override_request == "Nein":
-            INFO_STR = (
-                "Kein neues Schiffsregister eröffnet."
-                "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."  # noqa: E501
-            )
-            st.info(
-                INFO_STR,
-                icon=":material/info:",
-            )
-        else:
-            set_register_open_success(True)
-    else:
-        set_register_open_success(True)
-
-if is_register_open_success():
-    clear_session_state()
-    setup_session_state()
-    st.success("Neues Schiffsregister eröffnet", icon=":material/check_circle:")
-"""
 st.write(st.session_state)
 st.write(is_session_state_empty())
