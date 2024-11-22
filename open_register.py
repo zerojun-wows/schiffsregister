@@ -31,7 +31,6 @@ if st.button("Neues Schiffsregister eröffnen"):
             ],
         )
         if override_request == "Nein":
-            set_register_open_success(False)
             INFO_STR = (
                 "Kein neues Schiffsregister eröffnet."
                 "Das bereits geöffnete Schiffsregister kann weiterhin genutzt werden."  # noqa: E501
@@ -41,13 +40,16 @@ if st.button("Neues Schiffsregister eröffnen"):
                 icon=":material/info:",
             )
         else:
-            st.write("TEEST")
+            clear_session_state()
+            setup_session_state()
+            set_register_open_success(True)
+
     else:
         clear_session_state()
         setup_session_state()
         set_register_open_success(True)
 
-if is_register_open_success:
+if is_register_open_success():
     st.success("Neues Schiffsregister eröffnet", icon=":material/check_circle:")
 
 st.write(st.session_state)
