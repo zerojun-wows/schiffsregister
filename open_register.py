@@ -46,8 +46,10 @@ else:
         clear_session_state()
         setup_session_state()
         st.success(
-            "Neues Schiffsregister eröffnet. "
-            "Sie können nun zur Ansicht wechseln.",
+            (
+                "Neues Schiffsregister eröffnet. "
+                "Sie können nun zur Ansicht wechseln."
+            ),
             icon=":material/check_circle:",
         )
 
