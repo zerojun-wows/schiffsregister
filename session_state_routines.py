@@ -24,7 +24,7 @@ def clear_session_state() -> None:
     """
     Removes all keys and values from session_state
     """
-    for key in st.session_state.items():
+    for key in st.session_state.keys():
         del st.session_state[key]
 
 
@@ -51,7 +51,7 @@ def is_session_state_empty() -> bool:
 
 
 def set_register_open_success(value: bool) -> None:
-    st.clear_session_state.register_open_success = value
+    st.session_state.register_open_success = value
 
 
 def setup_session_state() -> None:
