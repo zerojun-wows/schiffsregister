@@ -23,7 +23,7 @@ if not is_session_state_empty():
     override_request = st.radio(
         "Wollen Sie das bestehende Schiffsregister überschreiben?",
         ["Nein", "Ja"],
-        index=None,
+        index=0,
         captions=[
             "Es wird kein neues Schiffsregister eröffnet",
             "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
