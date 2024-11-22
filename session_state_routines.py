@@ -24,7 +24,7 @@ def clear_session_state() -> None:
     """
     Removes all keys and values from session_state
     """
-    for key in st.session_state.keys():
+    for key in st.session_state.items():
         del st.session_state[key]
 
 
