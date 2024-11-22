@@ -62,5 +62,5 @@ else:
             icon=":material/news:",
         )
 
-uploaded_file = st.file_upload()
+uploaded_file = st.file_uploader()
 st.write(st.session_state)
