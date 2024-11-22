@@ -52,3 +52,12 @@ def setup_session_state() -> None:
 
     if "ship_register_current" not in st.session_state:
         st.session_state.ship_register_current = []
+
+    if "additions_id_list" not in st.session_state:
+        st.session_state.additions_ids = []
+
+    if "modifications_id_list" not in st.session_state:
+        st.session_state.modifacions_id_list = []
+
+    if "removals_id_list" not in st.session_state:
+        st.session_state.removals_id_list = []
