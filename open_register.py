@@ -20,6 +20,10 @@ st.write(
 
 if not is_session_state_empty():
     st.warning("Ein Schiffsregister ist bereits geöffnet")
+
+st.subheader("Neues Schiffsregister")
+
+if not is_session_state_empty():
     override_request = st.radio(
         "Wollen Sie das bestehende Schiffsregister überschreiben?",
         ["Nein", "Ja"],
@@ -62,9 +66,17 @@ else:
             icon=":material/news:",
         )
 
+st.subheader("Schiffsregister hochladen")
+
 uploaded_file = st.file_uploader(
     "Bestehendes Schiffsregister hochladen", type="csv"
 )
+
+if uploaded_file is not None:
+    if not is_session_state_empty():
+        pass
+    else:
+        pass
 
 
 st.write(st.session_state)
