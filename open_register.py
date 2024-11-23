@@ -11,6 +11,10 @@ from session_state_routines import (
 )
 
 
+def has_file_needed_main_columns(file_df: pd.DataFrame) -> bool:
+    missing_columns = [col for col in main_columns if col not in df.columns]
+
+
 st.title("Schiffsregister - Öffnen")
 
 st.write(
@@ -73,6 +77,8 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+
     if not is_session_state_empty():
         pass
     else:
