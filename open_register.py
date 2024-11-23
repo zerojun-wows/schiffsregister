@@ -6,13 +6,7 @@ from session_state_routines import (
     clear_session_state,
     is_session_state_empty,
     setup_session_state,
-    is_register_open_success,
-    set_register_open_success,
 )
-
-
-def has_file_needed_main_columns(file_df: pd.DataFrame) -> bool:
-    missing_columns = [col for col in main_columns if col not in df.columns]
 
 
 st.title("Schiffsregister - Öffnen")
