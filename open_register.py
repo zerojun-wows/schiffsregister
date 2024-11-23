@@ -2,6 +2,7 @@
 Module contains open or upload part of schiffsregister application
 """
 import streamlit as st
+from data_config import main_columns
 from session_state_routines import (
     clear_session_state,
     is_session_state_empty,
