@@ -63,7 +63,7 @@ else:
         )
 
 uploaded_file = st.file_uploader(
-    "Bestehendes Schiffsregister laden", type="csv"
+    "Bestehendes Schiffsregister hochladen", type="csv"
 )
 
 
