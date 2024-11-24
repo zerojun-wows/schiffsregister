@@ -21,6 +21,13 @@ def has_uploaded_file_missing_columns(uploaded_file_df: pd.DataFrame) -> bool:
     else:
         return False
 
+def has_uploaded_file_extra_columns(uploaded_file_df: pd.DataFrame)-> bool:
+    extra_columns = [
+        col for col in df.columns if col not in main_columns
+    ]    
+
+    if extra_columns:
+        st.warning(f"Zusätzliche Spalten: {', '.join(extra_columns)}")
 
 st.title("Schiffsregister - Öffnen")
 
@@ -86,7 +93,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 
-    if not has_uploaded_file_main_columns(df) and
+    if not has_uploaded_file_missing_columns(df) and
     if not is_session_state_empty():
         pass
     else:
