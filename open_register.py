@@ -2,6 +2,7 @@
 Module contains open or upload part of schiffsregister application
 """
 import streamlit as st
+import pandas as pd
 from data_config import main_columns
 from session_state_routines import (
     clear_session_state,
@@ -85,6 +86,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 
+    if not has_uploaded_file_main_columns(df) and
     if not is_session_state_empty():
         pass
     else:
