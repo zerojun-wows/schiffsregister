@@ -114,8 +114,10 @@ if uploaded_file is not None:
                 captions=[
                     "Es wird kein Schiffsregister geöffnet.",
                     " ".join(
-                        "Geöffnetes Schiffsregister wird entfernt und",
-                        "ausgewähltes Schiffsregister wird geöffnet",
+                        (
+                            "Geöffnetes Schiffsregister wird entfernt und",
+                            "ausgewähltes Schiffsregister wird geöffnet",
+                        )
                     ),
                 ],
             )
