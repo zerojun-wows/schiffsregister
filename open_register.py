@@ -158,6 +158,3 @@ if uploaded_file is not None:
                     label="Schiffsregister - Ansehen",
                     icon=":material/news:",
                 )
-
-
-st.write(st.session_state)
