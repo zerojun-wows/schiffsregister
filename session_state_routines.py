@@ -28,13 +28,13 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 
-def get_current_ship_register_dataframe() -> pd.DataFrame:
+def get_current_ship_register() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_current, columns=all_columns
     )
 
 
-def get_original_ship_register_dataframe() -> pd.DataFrame:
+def get_original_ship_register() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_original, columns=all_columns
     )
@@ -44,6 +44,12 @@ def is_session_state_empty() -> bool:
     if len(st.session_state) == 0:
         return True
     return False
+
+
+def set_current_ship_register(current_register_df: pd.DataFrame) -> None:
+    st.session_state.ship_register_current = current_register_df.to_dict(
+        orient="records"
+    )
 
 
 def setup_session_state() -> None:
