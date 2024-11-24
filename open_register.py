@@ -117,7 +117,7 @@ if uploaded_file is not None:
                     "ausgewähltes Schiffsregister wird geöffnet",
                 ],
             )
-            if override_request == "Ja":
+            if override_request_upload == "Ja":
                 if st.button(
                     "Schiffregister entfernen und Ausgewähltes öffnen"
                 ):
