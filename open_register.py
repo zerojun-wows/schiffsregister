@@ -11,7 +11,7 @@ from session_state_routines import (
 )
 
 
-def has_uploaded_file_main_columns(uploaded_file_df: pd.DataFrame) -> bool:
+def has_uploaded_file_missing_columns(uploaded_file_df: pd.DataFrame) -> bool:
     missing_columns = [
         col for col in main_columns if col not in uploaded_file_df.columns
     ]
