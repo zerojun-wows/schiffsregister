@@ -107,7 +107,17 @@ if uploaded_file is not None:
         df
     ) and not has_uploaded_file_extra_columns(df):
         if not is_session_state_empty():
-            pass
+            override_request_upload = st.radio(
+                "Wollen Sie das bestehende Schiffsregister überschreiben?",
+                ["Nein", "Ja"],
+                index=0,
+                captions=[
+                    "Es wird kein Schiffsregister geöffnet.",
+                    "Geöffnetes Schiffsregister wird entfernt und ",
+                    "ausgewähltes Schiffsregister wird eröffnet",
+                ],
+            )
+
         else:
             if st.button("Schiffsregister öffnen"):
                 clear_session_state()
