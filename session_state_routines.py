@@ -46,6 +46,11 @@ def is_session_state_empty() -> bool:
     return False
 
 
+def set_both_ship_registers(register_df: pd.DataFrame) -> None:
+    set_current_ship_register(register_df)
+    set_original_ship_register(register_df)
+
+
 def set_current_ship_register(current_register_df: pd.DataFrame) -> None:
     st.session_state.ship_register_current = current_register_df.to_dict(
         orient="records"
