@@ -97,7 +97,7 @@ else:
 st.subheader("Schiffsregister hochladen")
 
 uploaded_file = st.file_uploader(
-    "Bestehendes Schiffsregister hochladen", type="csv"
+    "Bestehende Schiffsregister-Datei auswählen", type="csv"
 )
 
 if uploaded_file is not None:
@@ -109,7 +109,22 @@ if uploaded_file is not None:
         if not is_session_state_empty():
             pass
         else:
-            pass
+            if st.button("Schiffsregister öffnen"):
+                clear_session_state()
+                setup_session_state()
+                set_both_ship_registers(df)
+                st.success(
+                    (
+                        "Bestehendes Schiffsregister geöffnet. "
+                        "Sie können nun zur Ansicht wechseln."
+                    ),
+                    icon=":material/check_circle:",
+                )
+                st.page_link(
+                    "show_register.py",
+                    label="Schiffsregister - Ansehen",
+                    icon=":material/news:",
+                )
 
 
 st.write(st.session_state)
