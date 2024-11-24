@@ -8,6 +8,7 @@ from session_state_routines import (
     clear_session_state,
     is_session_state_empty,
     setup_session_state,
+    set_both_ship_registers,
 )
 
 
