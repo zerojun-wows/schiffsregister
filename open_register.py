@@ -16,7 +16,10 @@ def has_uploaded_file_missing_columns(uploaded_file_df: pd.DataFrame) -> bool:
         col for col in main_columns if col not in uploaded_file_df.columns
     ]
     if missing_columns:
-        st.error(f"Fehlende Spalten: {', '.join(missing_columns)}")
+        st.error(
+            f"Fehlende Spalten: {', '.join(missing_columns)}",
+            icon=":material/error:",
+        )
         return True
     else:
         return False
