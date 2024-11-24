@@ -113,10 +113,10 @@ if uploaded_file is not None:
                 index=0,
                 captions=[
                     "Es wird kein Schiffsregister geöffnet.",
-                    (
-                        "Geöffnetes Schiffsregister wird entfernt und ",
+                    " ".join(
+                        "Geöffnetes Schiffsregister wird entfernt und",
                         "ausgewähltes Schiffsregister wird geöffnet",
-                    ).join(),
+                    ),
                 ],
             )
             if override_request_upload == "Ja":
