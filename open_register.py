@@ -114,9 +114,28 @@ if uploaded_file is not None:
                 captions=[
                     "Es wird kein Schiffsregister geöffnet.",
                     "Geöffnetes Schiffsregister wird entfernt und ",
-                    "ausgewähltes Schiffsregister wird eröffnet",
+                    "ausgewähltes Schiffsregister wird geöffnet",
                 ],
             )
+            if override_request == "Ja":
+                if st.button(
+                    "Schiffregister entfernen und Ausgewähltes öffnen"
+                ):
+                    clear_session_state()
+                    setup_session_state()
+                    set_both_ship_registers(df)
+                    st.success(
+                        (
+                            "Bestehendes Schiffsregister geöffnet. "
+                            "Sie können nun zur Ansicht wechseln."
+                        ),
+                        icon=":material/check_circle:",
+                    )
+                    st.page_link(
+                        "show_register.py",
+                        label="Schiffsregister - Ansehen",
+                        icon=":material/news:",
+                    )
 
         else:
             if st.button("Schiffsregister öffnen"):
