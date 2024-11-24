@@ -116,7 +116,7 @@ if uploaded_file is not None:
                     (
                         "Geöffnetes Schiffsregister wird entfernt und ",
                         "ausgewähltes Schiffsregister wird geöffnet",
-                    ).to_str(),
+                    ).join(),
                 ],
             )
             if override_request_upload == "Ja":
