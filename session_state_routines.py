@@ -40,18 +40,10 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
-def is_register_open_success() -> bool:
-    return st.session_state.register_open_success
-
-
 def is_session_state_empty() -> bool:
     if len(st.session_state) == 0:
         return True
     return False
-
-
-def set_register_open_success(value: bool) -> None:
-    st.session_state.register_open_success = value
 
 
 def setup_session_state() -> None:
