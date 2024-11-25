@@ -13,23 +13,22 @@ from session_state_routines import (
 
 
 def has_uploaded_file_missing_columns(uploaded_file_df: pd.DataFrame) -> bool:
-    missing_columns = [
+    if missing_columns := [
         col for col in main_columns if col not in uploaded_file_df.columns
-    ]
-    if missing_columns:
+    ]:
         st.error(
             f"Fehlende Spalten: {', '.join(missing_columns)}",
             icon=":material/error:",
         )
         return True
-    else:
-        return False
+
+    return False
 
 
 def has_uploaded_file_extra_columns(uploaded_file_df: pd.DataFrame) -> bool:
-    extra_columns = [col for col in df.columns if col not in main_columns]
-
-    if extra_columns:
+    if extra_columns := [
+        col for col in uploaded_file_df.columns if col not in main_columns
+    ]:
         st.warning(
             f"Zusätzliche Spalten: {', '.join(extra_columns)}",
             icon=":material/warning:",
@@ -42,8 +41,8 @@ def has_uploaded_file_extra_columns(uploaded_file_df: pd.DataFrame) -> bool:
 st.title("Schiffsregister - Öffnen")
 
 st.write(
-    f"Sie können ein neues leeres Schiffsregister eröffnen, oder "
-    f"ein bestehendes Schiffsregister hochladen."
+    "Sie können ein neues leeres Schiffsregister eröffnen, oder "
+    "ein bestehendes Schiffsregister hochladen."
 )
 
 if not is_session_state_empty():
@@ -61,29 +60,14 @@ if not is_session_state_empty():
             "Geöffnetes Schiffsregister wird entfernt und ein leeres Schiffsregister wird eröffnet",  # noqa: E501
         ],
     )
-    if override_request == "Ja":
-        if st.button("Schiffregister entfernen und Neues eröffnen"):
-            clear_session_state()
-            setup_session_state()
-            st.success(
-                (
-                    "Neues Schiffsregister eröffnet."
-                    "Sie können nun zur Ansicht wechseln."
-                ),
-                icon=":material/check_circle:",
-            )
-            st.page_link(
-                "show_register.py",
-                label="Schiffsregister - Ansehen",
-                icon=":material/news:",
-            )
-else:
-    if st.button("Neues Schiffsregister eröffnen"):
+    if override_request == "Ja" and st.button(
+        "Schiffregister entfernen und Neues eröffnen"
+    ):
         clear_session_state()
         setup_session_state()
         st.success(
             (
-                "Neues Schiffsregister eröffnet. "
+                "Neues Schiffsregister eröffnet."
                 "Sie können nun zur Ansicht wechseln."
             ),
             icon=":material/check_circle:",
@@ -93,6 +77,21 @@ else:
             label="Schiffsregister - Ansehen",
             icon=":material/news:",
         )
+elif st.button("Neues Schiffsregister eröffnen"):
+    clear_session_state()
+    setup_session_state()
+    st.success(
+        (
+            "Neues Schiffsregister eröffnet. "
+            "Sie können nun zur Ansicht wechseln."
+        ),
+        icon=":material/check_circle:",
+    )
+    st.page_link(
+        "show_register.py",
+        label="Schiffsregister - Ansehen",
+        icon=":material/news:",
+    )
 
 st.subheader("Schiffsregister hochladen")
 
@@ -121,28 +120,9 @@ if uploaded_file is not None:
                     ),
                 ],
             )
-            if override_request_upload == "Ja":
-                if st.button(
-                    "Schiffregister entfernen und Ausgewähltes öffnen"
-                ):
-                    clear_session_state()
-                    setup_session_state()
-                    set_both_ship_registers(df)
-                    st.success(
-                        (
-                            "Bestehendes Schiffsregister geöffnet. "
-                            "Sie können nun zur Ansicht wechseln."
-                        ),
-                        icon=":material/check_circle:",
-                    )
-                    st.page_link(
-                        "show_register.py",
-                        label="Schiffsregister - Ansehen",
-                        icon=":material/news:",
-                    )
-
-        else:
-            if st.button("Schiffsregister öffnen"):
+            if override_request_upload == "Ja" and st.button(
+                "Schiffregister entfernen und Ausgewähltes öffnen"
+            ):
                 clear_session_state()
                 setup_session_state()
                 set_both_ship_registers(df)
@@ -158,3 +138,20 @@ if uploaded_file is not None:
                     label="Schiffsregister - Ansehen",
                     icon=":material/news:",
                 )
+
+        elif st.button("Schiffsregister öffnen"):
+            clear_session_state()
+            setup_session_state()
+            set_both_ship_registers(df)
+            st.success(
+                (
+                    "Bestehendes Schiffsregister geöffnet. "
+                    "Sie können nun zur Ansicht wechseln."
+                ),
+                icon=":material/check_circle:",
+            )
+            st.page_link(
+                "show_register.py",
+                label="Schiffsregister - Ansehen",
+                icon=":material/news:",
+            )
