@@ -46,7 +46,9 @@ st.write(
 )
 
 if not is_session_state_empty():
-    st.warning("Ein Schiffsregister ist bereits geöffnet")
+    st.warning(
+        "Ein Schiffsregister ist bereits geöffnet", icon=":material/warning:"
+    )
 
 st.subheader("Neues Schiffsregister")
 
