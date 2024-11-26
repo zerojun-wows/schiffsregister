@@ -16,3 +16,5 @@ with st.form("add_ship_form"):
         options=nations_order_dict.keys(),
         key="new_ship_nation",
     )
+
+    submitted = st.form_submit_button("Schiff hinzufügen")
