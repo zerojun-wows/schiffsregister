@@ -36,7 +36,7 @@ with st.form("add_ship_form"):
             options=tier_order_dict.keys(),
             key="add_ship_tier",
         )
-        name = st.text_input("Name", key="add_ship_name").trim()
+        name = st.text_input("Name", key="add_ship_name")
 
     submitted = st.form_submit_button("Schiff hinzufügen")
 
