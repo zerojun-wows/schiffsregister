@@ -48,6 +48,10 @@ def is_session_state_empty() -> bool:
     return len(st.session_state) == 0
 
 
+def reset_add_form() -> None:
+    pass
+
+
 def set_both_ship_registers(register_df: pd.DataFrame) -> None:
     set_current_ship_register(register_df)
     set_original_ship_register(register_df)

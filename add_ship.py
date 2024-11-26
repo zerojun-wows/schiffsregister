@@ -8,11 +8,8 @@ from data_config import (
 from session_state_routines import (
     check_register_open,
     add_ship_to_current_register,
+    reset_add_form,
 )
-
-
-def reset_form() -> None:
-    pass
 
 
 st.title("Schiffsregister - Schiff hinzufügen")
