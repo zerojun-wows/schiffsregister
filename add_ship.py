@@ -38,3 +38,6 @@ with st.form("add_ship_form"):
         name = st.text_input("Name", key="add_ship_name")
 
     submitted = st.form_submit_button("Schiff hinzufügen")
+
+
+st.write(st.session_state)
