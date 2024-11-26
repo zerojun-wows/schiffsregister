@@ -10,6 +10,11 @@ from session_state_routines import (
     add_ship_to_current_register,
 )
 
+
+def reset_form() -> None:
+    pass
+
+
 st.title("Schiffsregister - Schiff hinzufügen")
 
 check_register_open()
@@ -39,6 +44,7 @@ with st.form("add_ship_form"):
         name = st.text_input("Name", key="add_ship_name")
 
     submitted = st.form_submit_button("Schiff hinzufügen")
+    reset = st.form_submit_button("Zurücksetzen", on_click=reset_form)
 
     if submitted and not name:
         st.error(
