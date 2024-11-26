@@ -7,7 +7,7 @@ from data_config import (
 )
 from session_state_routines import (
     check_register_open,
-    add_ship_to_register,
+    add_ship_to_current_register,
 )
 
 st.title("Schiffsregister - Schiff hinzufügen")
@@ -55,6 +55,9 @@ with st.form("add_ship_form"):
             "Name": name,
         }
         add_ship_to_current_register(add_ship)
-
+        st.success(
+            f"Das Schiff '{name}' wurde erfolgreich hinzugefügt!",
+            icon=":material/check_circle:",
+        )
 
 st.write(st.session_state)
