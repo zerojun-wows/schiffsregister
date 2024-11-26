@@ -67,7 +67,7 @@ with st.form("add_ship_form"):
             icon=":material/error:",
         )
 
-    if submitted and name:
+    if all(submitted, name, nation, typ, klasse, stufe):
         add_ship = {
             "Nation": nation,
             "Typ": typ,
