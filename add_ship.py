@@ -13,16 +13,19 @@ st.title("Schiffsregister - Schiff hinzufügen")
 check_register_open()
 
 with st.form("add_ship_form"):
-    nation = st.selectbox(
-        "Nation",
-        options=nations_order_dict.keys(),
-        key="add_ship_nation",
-    )
-    typ = st.selectbox("Typ", options=type_option_list, key="add_ship_type")
-    klasse = st.selectbox(
-        "Klasse",
-        options=class_order_dict.keys(),
-        key="add_ship_class",
-    )
+    col1, col2 = st.columns(2)
+
+    with col1:
+        nation = st.selectbox(
+            "Nation",
+            options=nations_order_dict.keys(),
+            key="add_ship_nation",
+        )
+        typ = st.selectbox("Typ", options=type_option_list, key="add_ship_type")
+        klasse = st.selectbox(
+            "Klasse",
+            options=class_order_dict.keys(),
+            key="add_ship_class",
+        )
 
     submitted = st.form_submit_button("Schiff hinzufügen")
