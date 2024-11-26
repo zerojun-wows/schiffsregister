@@ -17,5 +17,5 @@ with st.form("add_ship_form"):
         options=nations_order_dict.keys(),
         key="new_ship_nation",
     )
-    typ = st.selectbox("Typ", options=ship_type_options, key="new_ship_type")
+    typ = st.selectbox("Typ", options=type_option_list, key="new_ship_type")
     submitted = st.form_submit_button("Schiff hinzufügen")
