@@ -11,10 +11,10 @@ pages = {
         ),
     ],
     "Bearbeitungsoptionen": [
-        st.Page("add_ship.py", title="Schiff hinzufügen")
-        st.Page("modify_ship.py", title="Schiff bearbeiten")
-        st.Page("remove_ship.py", title="Schiff entfernen")
-    ]
+        st.Page("add_ship.py", title="Schiff hinzufügen"),
+        st.Page("modify_ship.py", title="Schiff bearbeiten"),
+        st.Page("remove_ship.py", title="Schiff entfernen"),
+    ],
 }
 
 pg = st.navigation(pages)
