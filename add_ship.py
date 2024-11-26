@@ -25,6 +25,7 @@ with st.form("add_ship_form"):
             options=nations_order_dict.keys(),
             index=None,
             key="add_ship_nation",
+            placeholder="Bitte eine Auswahl treffen",
         )
         typ = st.selectbox("Typ", options=type_option_list, key="add_ship_type")
         klasse = st.selectbox(
