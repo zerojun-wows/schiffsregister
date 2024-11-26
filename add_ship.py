@@ -56,6 +56,6 @@ with st.form("add_ship_form"):
         }
         add_ship_to_current_register(add_ship)
         st.success(
-            f"Das Schiff '{name}' wurde erfolgreich hinzugefügt!",
+            f"Das Schiff '{add_ship['Name']}' wurde erfolgreich hinzugefügt!",
             icon=":material/check_circle:",
         )
