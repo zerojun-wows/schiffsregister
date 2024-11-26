@@ -60,7 +60,6 @@ with st.form("add_ship_form"):
             "In einem der Auswahlfelder fehlt die Auswahl",
             icon=":material/error:",
         )
-        name = None
 
     if submitted and not name:
         st.error(
