@@ -44,5 +44,7 @@ with st.form("add_ship_form"):
             "Der Name des Schiffs darf nicht leer sein!",
             icon=":material/error:",
         )
+    if submitted and name:
+        pass
 
 st.write(st.session_state)
