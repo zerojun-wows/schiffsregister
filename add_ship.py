@@ -33,7 +33,8 @@ with st.form("add_ship_form"):
         stufe = st.selectbox(
             "Stufe",
             options=tier_order_dict.keys(),
-            key="new_ship_tier",
+            key="add_ship_tier",
         )
+        name = st.text_input("Name", key="add_ship_name")
 
     submitted = st.form_submit_button("Schiff hinzufügen")
