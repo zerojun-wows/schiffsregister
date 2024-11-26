@@ -3,6 +3,7 @@ from data_config import (
     nations_order_dict,
     type_option_list,
     class_order_dict,
+    tier_order_dict,
 )
 from session_state_routines import (
     check_register_open,
@@ -26,6 +27,13 @@ with st.form("add_ship_form"):
             "Klasse",
             options=class_order_dict.keys(),
             key="add_ship_class",
+        )
+
+    with col2:
+        stufe = st.selectbox(
+            "Stufe",
+            options=tier_order_dict.keys(),
+            key="new_ship_tier",
         )
 
     submitted = st.form_submit_button("Schiff hinzufügen")
