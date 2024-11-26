@@ -62,3 +62,5 @@ with st.form("add_ship_form"):
             f"Das Schiff '{add_ship['Name']}' wurde erfolgreich hinzugefügt!",
             icon=":material/check_circle:",
         )
+
+st.write(st.session_state)
