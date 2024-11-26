@@ -49,7 +49,11 @@ def is_session_state_empty() -> bool:
 
 
 def reset_add_form() -> None:
-    pass
+    st.session_state.add_ship_nation = ""
+    st.session_state.add_ship_type = ""
+    st.session_state.add_ship_class = ""
+    st.session_state.add_ship_tier = ""
+    st.session_state.add_ship_name = ""
 
 
 def set_both_ship_registers(register_df: pd.DataFrame) -> None:
