@@ -23,6 +23,7 @@ with st.form("add_ship_form"):
         nation = st.selectbox(
             "Nation",
             options=nations_order_dict.keys(),
+            index=None,
             key="add_ship_nation",
         )
         typ = st.selectbox("Typ", options=type_option_list, key="add_ship_type")
