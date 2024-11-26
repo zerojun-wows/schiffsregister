@@ -6,7 +6,7 @@ import streamlit as st
 from data_config import all_columns
 
 
-def add_ship_to_register(ship_data: Dict) -> None:
+def add_ship_to_current_register(ship_data: Dict) -> None:
     st.session_state.ship_register_current.append(ship_data)
 
 

@@ -7,6 +7,7 @@ from data_config import (
 )
 from session_state_routines import (
     check_register_open,
+    add_ship_to_register,
 )
 
 st.title("Schiffsregister - Schiff hinzufügen")
@@ -44,7 +45,16 @@ with st.form("add_ship_form"):
             "Der Name des Schiffs darf nicht leer sein!",
             icon=":material/error:",
         )
+
     if submitted and name:
-        pass
+        add_ship = {
+            "Nation": nation,
+            "Typ": typ,
+            "Klasse": klasse,
+            "Stufe": stufe,
+            "Name": name,
+        }
+        add_ship_to_current_register(add_ship)
+
 
 st.write(st.session_state)
