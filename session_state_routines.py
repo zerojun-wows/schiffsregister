@@ -6,6 +6,10 @@ import streamlit as st
 from data_config import all_columns
 
 
+def add_ship_to_register(ship_data: Dict) -> None:
+    st.session_state.ship_register_current.append(ship_data)
+
+
 def check_register_open() -> None:
     if is_session_state_empty():
         st.info(
@@ -41,9 +45,7 @@ def get_original_ship_register() -> pd.DataFrame:
 
 
 def is_session_state_empty() -> bool:
-    if len(st.session_state) == 0:
-        return True
-    return False
+    return len(st.session_state) == 0
 
 
 def set_both_ship_registers(register_df: pd.DataFrame) -> None:
