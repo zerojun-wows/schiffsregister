@@ -27,18 +27,28 @@ with st.form("add_ship_form"):
             key="add_ship_nation",
             placeholder="Bitte eine Auswahl treffen",
         )
-        typ = st.selectbox("Typ", options=type_option_list, key="add_ship_type")
+        typ = st.selectbox(
+            "Typ",
+            options=type_option_list,
+            index=None,
+            key="add_ship_type",
+            placeholder="Bitte eine Auswahl treffen",
+        )
         klasse = st.selectbox(
             "Klasse",
             options=class_order_dict.keys(),
+            index=None,
             key="add_ship_class",
+            placeholder="Bitte eine Auswahl treffen",
         )
 
     with col2:
         stufe = st.selectbox(
             "Stufe",
             options=tier_order_dict.keys(),
+            index=None,
             key="add_ship_tier",
+            placeholder="Bitte eine Auswahl treffen",
         )
         name = st.text_input("Name", key="add_ship_name")
 
