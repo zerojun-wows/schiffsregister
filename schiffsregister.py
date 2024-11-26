@@ -14,7 +14,9 @@ pages = {
         st.Page(
             "add_ship.py", title="Schiff hinzufügen", icon=":material/add:"
         ),
-        st.Page("modify_ship.py", title="Schiff bearbeiten"),
+        st.Page(
+            "modify_ship.py", title="Schiff bearbeiten", icon=":material/edit:"
+        ),
         st.Page(
             "remove_ship.py", title="Schiff entfernen", icon=":material/remove:"
         ),
