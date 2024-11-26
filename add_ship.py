@@ -48,6 +48,6 @@ with st.form("add_ship_form"):
                 "Name": name,
             }
         else:
-            pass
+            st.error("Der Name des Schiffs darf nicht leer sein!")
 
 st.write(st.session_state)
