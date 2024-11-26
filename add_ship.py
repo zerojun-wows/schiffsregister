@@ -25,21 +25,21 @@ with st.form("add_ship_form"):
             options=nations_order_dict.keys(),
             index=None,
             key="add_ship_nation",
-            placeholder="Bitte eine Auswahl treffen",
+            placeholder="Bitte eine Auswahl treffen!",
         )
         typ = st.selectbox(
             "Typ",
             options=type_option_list,
             index=None,
             key="add_ship_type",
-            placeholder="Bitte eine Auswahl treffen",
+            placeholder="Bitte eine Auswahl treffen!",
         )
         klasse = st.selectbox(
             "Klasse",
             options=class_order_dict.keys(),
             index=None,
             key="add_ship_class",
-            placeholder="Bitte eine Auswahl treffen",
+            placeholder="Bitte eine Auswahl treffen!",
         )
 
     with col2:
@@ -48,12 +48,15 @@ with st.form("add_ship_form"):
             options=tier_order_dict.keys(),
             index=None,
             key="add_ship_tier",
-            placeholder="Bitte eine Auswahl treffen",
+            placeholder="Bitte eine Auswahl treffen!",
         )
         name = st.text_input("Name", key="add_ship_name")
 
     submitted = st.form_submit_button("Schiff hinzufügen")
     reset = st.form_submit_button("Zurücksetzen", on_click=reset_add_form)
+
+    if all(submitted, not nation, not typ, not klasse, not stufe)
+        st.error("In einem der Auswahlfelder fehlt diue Auswahl", icon=":material/error:",)
 
     if submitted and not name:
         st.error(
