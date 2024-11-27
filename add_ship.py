@@ -11,7 +11,18 @@ from session_state_routines import (
     reset_add_form,
 )
 
-def get_missing_fields(field_list: list[bool]) -> str:
+
+def get_missing_fields(nation, typ, klasse, stufe) -> list[str]:
+    fehlende_felder = []
+    if not nation:
+        fehlende_felder.append("Nation")
+    if not typ:
+        fehlende_felder.append("Typ")
+    if not klasse:
+        fehlende_felder.append("Klasse")
+    if not stufe:
+        fehlende_felder.append("Stufe")
+    return fehlende_felder
 
 
 st.title("Schiffsregister - Schiff hinzufügen")
@@ -59,7 +70,7 @@ with st.form("add_ship_form"):
 
     if submitted and any([not nation, not typ, not klasse, not stufe]):
         st.error(
-            f"Bitte füllen Sie die folgenden Felder aus: {', '.join(get_missing_fields([not nation, not typ, not klasse, not stufe]))}",
+            f"Bitte treffen Sie bei den folgenden Feldern eine Auswahl: {', '.join(get_missing_fields([not nation, not typ, not klasse, not stufe]))}",
             icon=":material/error:",
         )
 
