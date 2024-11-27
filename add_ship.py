@@ -55,9 +55,11 @@ with st.form("add_ship_form"):
     submitted = st.form_submit_button("Schiff hinzufügen")
     reset = st.form_submit_button("Zurücksetzen", on_click=reset_add_form)
 
-    if all([submitted, any([not nation, not typ, not klasse, not stufe])]):
+    if submitted and any([not nation, not typ, not klasse, not stufe]):
+
+   if fehlende_felder:
         st.error(
-            "In einem der Auswahlfelder fehlt die Auswahl",
+            f"Bitte füllen Sie die folgenden Felder aus: {', '.join(get_fehlende_felder([not nation, not typ, not klasse, not stufe]))}",
             icon=":material/error:",
         )
 
