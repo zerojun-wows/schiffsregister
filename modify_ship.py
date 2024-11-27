@@ -12,4 +12,4 @@ check_register_open()
 
 st.write(st.session_state)
 
-st.write(type(st.session_state.ship_register_current))
+st.write(type(st.session_state["ship_register_current"]))
