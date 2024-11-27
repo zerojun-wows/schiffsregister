@@ -7,3 +7,5 @@ from session_state_routines import (
 st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
+
+st.write(st.session_state)
