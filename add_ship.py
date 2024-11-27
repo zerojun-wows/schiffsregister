@@ -70,7 +70,10 @@ with st.form("add_ship_form"):
 
     if submitted and any([not nation, not typ, not klasse, not stufe]):
         st.error(
-            f"Bitte treffen Sie bei den folgenden Feldern eine Auswahl: {', '.join(get_missing_fields(nation, typ, klasse, stufe))}",
+            (
+                "Bitte treffen Sie bei den folgenden Feldern eine Auswahl: "
+                f"{', '.join(get_missing_fields(nation, typ, klasse, stufe))}"
+            ),
             icon=":material/error:",
         )
 
