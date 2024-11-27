@@ -38,6 +38,10 @@ def get_current_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def get_current_ship_register_list() -> list:
+    return st.session_state.ship_register_current
+
+
 def get_original_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_original, columns=all_columns
