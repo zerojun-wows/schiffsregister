@@ -12,15 +12,15 @@ from session_state_routines import (
 )
 
 
-def get_missing_fields(nation, typ, klasse, stufe) -> list[str]:
+def get_missing_fields(_nation, _typ, _klasse, _stufe) -> list[str]:
     fehlende_felder = []
-    if not nation:
+    if not _nation:
         fehlende_felder.append("Nation")
-    if not typ:
+    if not _typ:
         fehlende_felder.append("Typ")
-    if not klasse:
+    if not _klasse:
         fehlende_felder.append("Klasse")
-    if not stufe:
+    if not _stufe:
         fehlende_felder.append("Stufe")
     return fehlende_felder
 
