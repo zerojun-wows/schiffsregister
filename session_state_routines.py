@@ -32,13 +32,13 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 
-def get_current_ship_register() -> pd.DataFrame:
+def get_current_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_current, columns=all_columns
     )
 
 
-def get_original_ship_register() -> pd.DataFrame:
+def get_original_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_original, columns=all_columns
     )
