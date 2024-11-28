@@ -24,6 +24,9 @@ select_edit_index = st.selectbox(
 )
 
 if st.button("Gewähltes Schiff bearbeiten"):
-    pass
+    entry = get_current_ship_register_list()[select_edit_index]
+
+    st.write(entry)
+
 
 st.write(st.session_state)
