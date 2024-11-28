@@ -11,7 +11,7 @@ check_register_open()
 
 st.subheader("Aktueller Bestand")
 
-current_ship_register_df = get_current_ship_register()
+current_ship_register_df = get_current_ship_register_dataframe()
 
 if current_ship_register_df.empty:
     st.info("Noch keine Einträge vorhanden", icon=":material/info:")
