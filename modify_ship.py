@@ -42,19 +42,19 @@ if st.button("Gewähltes Schiff bearbeiten"):
                 key="edit_ship_nation",
                 placeholder="Bitte eine Auswahl treffen!",
             )
-        typ = st.selectbox(
-            "Typ",
-            options=type_option_list,
-            index=None,
-            key="add_ship_type",
-            placeholder="Bitte eine Auswahl treffen!",
-        )
-        klasse = st.selectbox(
-            "Klasse",
-            options=class_order_dict.keys(),
-            index=None,
-            key="add_ship_class",
-            placeholder="Bitte eine Auswahl treffen!",
-        )
+            typ = st.selectbox(
+                "Typ",
+                options=type_option_list,
+                index=None,
+                key="edit_ship_type",
+                placeholder="Bitte eine Auswahl treffen!",
+            )
+            klasse = st.selectbox(
+                "Klasse",
+                options=class_order_dict.keys(),
+                index=None,
+                key="edit_ship_class",
+                placeholder="Bitte eine Auswahl treffen!",
+            )
 
 st.write(st.session_state)
