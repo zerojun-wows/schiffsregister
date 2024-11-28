@@ -5,11 +5,13 @@ from session_state_routines import (
     get_current_ship_register_list,
 )
 
+def edit_selectbox() ->
+
 st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
 
-st.write(range(len(get_current_ship_register_list())))
+st.write(bool(range(len(get_current_ship_register_list()))))
 
 
 select_edit_index = st.selectbox(
