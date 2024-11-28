@@ -10,7 +10,8 @@ st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
 
-st.write(len(get_current_ship_register_list()))
+if not len(get_current_ship_register_list()):
+    st.write(len(get_current_ship_register_list()))
 
 
 select_edit_index = st.selectbox(
