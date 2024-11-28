@@ -11,6 +11,10 @@ from session_state_routines import (
 )
 
 
+def reset_edit_form() -> None:
+    pass
+
+
 st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
@@ -55,6 +59,26 @@ if st.button("Gewähltes Schiff bearbeiten"):
                 index=None,
                 key="edit_ship_class",
                 placeholder="Bitte eine Auswahl treffen!",
+            )
+
+        with col2:
+            stufe = st.selectbox(
+                "Stufe",
+                options=tier_order_dict.keys(),
+                index=None,
+                key="edit_ship_tier",
+                placeholder="Bitte eine Auswahl treffen!",
+            )
+            name = st.text_input("Name", key="edit_ship_name")
+
+        col3, col4 = st.columns(2)
+
+        with col3:
+            submitted = st.form_submit_button("Schiff hinzufügen")
+
+        with col4:
+            reset = st.form_submit_button(
+                "Formular zurücksetzen", on_click=reset_edit_form
             )
 
 st.write(st.session_state)
