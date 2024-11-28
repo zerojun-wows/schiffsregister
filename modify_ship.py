@@ -9,6 +9,9 @@ st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
 
+st.write(range(len(get_current_ship_register_list())))
+
+
 select_edit_index = st.selectbox(
     "Auswahl des zu bearbeitenden Schiffes",
     options=range(len(get_current_ship_register_list())),
