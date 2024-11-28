@@ -15,6 +15,9 @@ select_edit_index = st.selectbox(
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
 )
 
+if st.button("Gewähltes Schiff bearbeiten"):
+    pass
+
 st.write(st.session_state)
 
 st.write(type(st.session_state["ship_register_current"]))
