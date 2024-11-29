@@ -42,7 +42,7 @@ if st.button("Gewähltes Schiff bearbeiten"):
             nation = st.selectbox(
                 "Nation",
                 options=nations_order_dict.keys(),
-                index=nations_order_dict[selected_ship_data["nation"]],
+                index=None,  # nations_order_dict[selected_ship_data["nation"]],
                 key="edit_ship_nation",
                 placeholder="Bitte eine Auswahl treffen!",
             )
