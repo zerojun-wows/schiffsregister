@@ -35,6 +35,8 @@ select_edit_index = st.selectbox(
 if st.button("Gewähltes Schiff bearbeiten"):
     selected_ship_data = get_current_ship_register_list()[select_edit_index]
 
+    st.write(selected_ship_data)
+
     with st.form("modify_ship_form"):
         col1, col2 = st.columns(2)
 
