@@ -40,7 +40,7 @@ if not get_current_ship_register_list():
     )
     st.stop()
 
-select_edit_index = st.selectbox(
+selected_edit_index = st.selectbox(
     "Auswahl des zu bearbeitenden Schiffes",
     options=range(len(get_current_ship_register_list())),
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
@@ -56,7 +56,7 @@ if edit_button and not selected_edit_index:
         icon=":material/error:",
     )
 
-if edit_button and select_edit_index:
+if edit_button and selected_edit_index:
     selected_ship_data = get_current_ship_register_list()[select_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
