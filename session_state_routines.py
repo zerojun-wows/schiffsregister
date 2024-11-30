@@ -117,3 +117,18 @@ def setup_session_state() -> None:
 
     if "register_open_success" not in st.session_state:
         st.session_state.register_open_success = False
+
+    if "edit_ship_nation_disabled" not in st.session_state:
+        st.session_state.edit_ship_nation_disabled = True
+
+    if "edit_ship_type_disabled" not in st.session_state:
+        st.session_state.edit_ship_type_disabled = True
+
+    if "edit_ship_class_disabled" not in st.session_state:
+        st.session_state.edit_ship_class_disabled = True
+
+    if "edit_ship_tier_disabled" not in st.session_state:
+        st.session_state.edit_ship_tier_disabled = True
+
+    if "edit_ship_name_disabled" not in st.session_state:
+        st.session_state.edit_ship_name_disabled = True
