@@ -111,11 +111,16 @@ with st.form("modify_ship_form"):
             disabled=is_form_field_disabled("edit_form_abort"),
         )
 
-    if submitted and not name.trim():
+    if submitted and not name.strip():
         st.error(
             "Der Name des Schiffs darf nicht leer sein!",
             icon=":material/error:",
         )
 
+    if all([submitted, name.strip(), nation, typ, klasse, stufe]):
+        st.success(
+            f"Das Schiff '{selected_ship_data['Name']}' wurde erfolgreich geändert!",
+            icon=":material/check_circle:",
+        )
 
 st.write(st.session_state)
