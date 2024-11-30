@@ -125,13 +125,13 @@ with st.form("modify_ship_form"):
         )
 
         if submitted and any([not nation, not typ, not klasse, not stufe]):
-        st.error(
-            (
-                "Bitte treffen Sie bei den folgenden Feldern eine Auswahl: "
-                f"{', '.join(get_missing_fields(nation, typ, klasse, stufe))}"
-            ),
-            icon=":material/error:",
-        )
+            st.error(
+                (
+                    "Bitte treffen Sie bei den folgenden Feldern eine Auswahl: "
+                    f"{', '.join(get_missing_fields(nation, typ, klasse, stufe))}"
+                ),
+                icon=":material/error:",
+            )
 
     if submitted and not name.strip():
         st.error(
