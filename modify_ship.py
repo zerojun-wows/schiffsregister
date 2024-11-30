@@ -57,7 +57,7 @@ if edit_button and not selected_edit_index:
     )
 
 if edit_button and selected_edit_index:
-    selected_ship_data = get_current_ship_register_list()[select_edit_index]
+    selected_ship_data = get_current_ship_register_list()[selected_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
         selected_ship_data["Typ"],
@@ -156,7 +156,7 @@ with st.form("modify_ship_form"):
             "Stufe": stufe,
             "Name": name,
         }
-        modify_ship_in_current_register(select_edit_index, ship_data)
+        modify_ship_in_current_register(selected_edit_index, ship_data)
         st.success(
             f"Das Schiff '{name}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
