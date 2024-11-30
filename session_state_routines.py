@@ -60,6 +60,14 @@ def reset_add_form() -> None:
     st.session_state.add_ship_name = None
 
 
+def reset_edit_form() -> None:
+    st.session_state.edit_ship_nation = None
+    st.session_state.edit_ship_type = None
+    st.session_state.edit_ship_class = None
+    st.session_state.edit_ship_tier = None
+    st.session_state.edit_ship_name = None
+
+
 def set_both_ship_registers(register_df: pd.DataFrame) -> None:
     set_current_ship_register(register_df)
     set_original_ship_register(register_df)
@@ -69,6 +77,20 @@ def set_current_ship_register(current_register_df: pd.DataFrame) -> None:
     st.session_state.ship_register_current = current_register_df.to_dict(
         orient="records"
     )
+
+
+def set_edit_form_values(
+    ship_nation: str,
+    ship_type: str,
+    ship_class: str,
+    ship_tier: str,
+    ship_name: str,
+) -> None:
+    st.session_state.edit_ship_nation = ship_nation
+    st.session_state.edit_ship_type = ship_type
+    st.session_state.edit_ship_class = ship_class
+    st.session_state.edit_ship_tier = ship_tier
+    st.session_state.edit_ship_name = ship_name
 
 
 def set_original_ship_register(original_register_df: pd.DataFrame) -> None:
