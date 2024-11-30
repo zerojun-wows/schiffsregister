@@ -48,7 +48,15 @@ select_edit_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-if st.button("Gewähltes Schiff bearbeiten") and select_edit_index:
+edit_button = st.button("Gewähltes Schiff bearbeiten")
+
+if edit_button and not selected_edit_index:
+    st.error(
+        "Die Auswahl eines Schiffes ist erforderlich!",
+        icon=":material/error:",
+    )
+
+if edit_button and select_edit_index:
     selected_ship_data = get_current_ship_register_list()[select_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
