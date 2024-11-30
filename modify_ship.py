@@ -44,6 +44,11 @@ if st.button("Gewähltes Schiff bearbeiten"):
         selected_ship_data["Name"],
     )
     set_form_field_disabled("edit_ship_nation", False)
+    set_form_field_disabled("edit_ship_type", False)
+    set_form_field_disabled("edit_ship_class", False)
+    set_form_field_disabled("edit_ship_tier", False)
+    set_form_field_disabled("edit_ship_name", False)
+
 
 with st.form("modify_ship_form"):
     col1, col2 = st.columns(2)
