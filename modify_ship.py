@@ -29,6 +29,16 @@ def get_missing_fields(_nation, _typ, _klasse, _stufe) -> list[str]:
     return fehlende_felder
 
 
+def update_edit_form() -> None:
+    set_form_field_disabled("edit_ship_nation", True)
+    set_form_field_disabled("edit_ship_type", True)
+    set_form_field_disabled("edit_ship_class", True)
+    set_form_field_disabled("edit_ship_tier", True)
+    set_form_field_disabled("edit_ship_name", True)
+    set_form_field_disabled("edit_form_submit", True)
+    set_form_field_disabled("edit_form_abort", True)
+
+
 st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
@@ -43,8 +53,9 @@ if not get_current_ship_register_list():
 selected_edit_index = st.selectbox(
     "Auswahl des zu bearbeitenden Schiffes",
     options=range(len(get_current_ship_register_list())),
-    format_func=lambda i: get_current_ship_register_list()[i]["Name"],
     index=None,
+    format_func=lambda i: get_current_ship_register_list()[i]["Name"],
+    on_change=update_edit_form,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
