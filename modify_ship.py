@@ -111,7 +111,7 @@ with st.form("modify_ship_form"):
             disabled=is_form_field_disabled("edit_form_abort"),
         )
 
-    if submitted and not str.trim(name):
+    if submitted and not name.trim():
         st.error(
             "Der Name des Schiffs darf nicht leer sein!",
             icon=":material/error:",
