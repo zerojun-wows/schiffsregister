@@ -58,7 +58,9 @@ if edit_button and selected_edit_index is None:
         icon=":material/error:",
     )
 
-if edit_button and (selected_edit_index >= 0):
+if edit_button and (
+    selected_edit_index is not None and selected_edit_index >= 0
+):
     selected_ship_data = get_current_ship_register_list()[selected_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
