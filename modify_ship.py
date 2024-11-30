@@ -43,7 +43,7 @@ if st.button("Gewähltes Schiff bearbeiten"):
         selected_ship_data["Stufe"],
         selected_ship_data["Name"],
     )
-    # st.write(selected_ship_data)
+    set_form_field_disabled("edit_ship_nation", False)
 
 with st.form("modify_ship_form"):
     col1, col2 = st.columns(2)
@@ -57,6 +57,7 @@ with st.form("modify_ship_form"):
             # else None,
             key="edit_ship_nation",
             placeholder="Bitte eine Auswahl treffen!",
+            disabled=is_form_field_disabled("edit_ship_nation"),
         )
         typ = st.selectbox(
             "Typ",
