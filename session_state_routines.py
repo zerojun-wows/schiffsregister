@@ -75,6 +75,8 @@ def reset_edit_form() -> None:
     st.session_state.edit_ship_class_disabled = True
     st.session_state.edit_ship_tier_disabled = True
     st.session_state.edit_ship_name_disabled = True
+    st.session_state.edit_form_submit_disabled = True
+    st.session_state.edit_form_abort_disabled = True
 
 
 def set_both_ship_registers(register_df: pd.DataFrame) -> None:
