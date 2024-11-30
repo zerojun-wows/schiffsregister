@@ -97,6 +97,10 @@ def set_edit_form_values(
     st.session_state.edit_ship_name = ship_name
 
 
+def set_form_field_disabled(form_field_name: str, value: bool) -> None:
+    st.session_state[form_field_name] = value
+
+
 def set_original_ship_register(original_register_df: pd.DataFrame) -> None:
     st.session_state.ship_register_original = original_register_df.to_dict(
         orient="records"
