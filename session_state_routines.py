@@ -49,7 +49,7 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
 
 
 def is_form_field_disabled(form_field_name: str) -> bool:
-    return st.session_state[form_field_name]
+    return st.session_state[f"{form_field_name}_disabled"]
 
 
 def is_session_state_empty() -> bool:
@@ -98,7 +98,7 @@ def set_edit_form_values(
 
 
 def set_form_field_disabled(form_field_name: str, value: bool) -> None:
-    st.session_state[form_field_name] = value
+    st.session_state[f"{form_field_name}_disabled"] = value
 
 
 def set_original_ship_register(original_register_df: pd.DataFrame) -> None:
