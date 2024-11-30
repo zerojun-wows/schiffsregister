@@ -15,6 +15,19 @@ from session_state_routines import (
 )
 
 
+def get_missing_fields(_nation, _typ, _klasse, _stufe) -> list[str]:
+    fehlende_felder = []
+    if not _nation:
+        fehlende_felder.append("Nation")
+    if not _typ:
+        fehlende_felder.append("Typ")
+    if not _klasse:
+        fehlende_felder.append("Klasse")
+    if not _stufe:
+        fehlende_felder.append("Stufe")
+    return fehlende_felder
+
+
 st.title("Schiffsregister - Schiff bearbeiten")
 
 check_register_open()
