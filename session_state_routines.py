@@ -145,3 +145,9 @@ def setup_session_state() -> None:
 
     if "edit_ship_name_disabled" not in st.session_state:
         st.session_state.edit_ship_name_disabled = True
+
+    if "edit_form_submit_enabled" not in st.session_state:
+        st.session_state.edit_form_submit_disabled = True
+
+    if "edit_form_abort_enabled" not in st.session_state:
+        st.session_state.edit_form_abort_disabled = True
