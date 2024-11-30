@@ -84,7 +84,7 @@ with st.form("add_ship_form"):
             icon=":material/error:",
         )
 
-    if submitted and not name:
+    if submitted and not name.strip():
         st.error(
             "Der Name des Schiffs darf nicht leer sein!",
             icon=":material/error:",
