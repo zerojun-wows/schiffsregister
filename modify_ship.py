@@ -168,7 +168,7 @@ with st.form("modify_ship_form"):
         set_form_field_disabled("edit_ship_name", True)
         set_form_field_disabled("edit_form_submit", True)
         set_form_field_disabled("edit_form_abort", True)
-        reset_edit_form()
+
         st.rerun()
 
 st.write(st.session_state)
