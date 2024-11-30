@@ -119,7 +119,9 @@ with st.form("modify_ship_form"):
 
     with col4:
         reset = st.form_submit_button(
-            "Bearbeitung abbrechen", on_click=reset_edit_form
+            "Bearbeitung abbrechen",
+            on_click=reset_edit_form,
+            disabled=is_form_field_disabled("edit_form_abort"),
         )
 
     if submitted and not name:
