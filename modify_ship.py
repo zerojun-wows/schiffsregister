@@ -124,6 +124,15 @@ with st.form("modify_ship_form"):
             disabled=is_form_field_disabled("edit_form_abort"),
         )
 
+        if submitted and any([not nation, not typ, not klasse, not stufe]):
+        st.error(
+            (
+                "Bitte treffen Sie bei den folgenden Feldern eine Auswahl: "
+                f"{', '.join(get_missing_fields(nation, typ, klasse, stufe))}"
+            ),
+            icon=":material/error:",
+        )
+
     if submitted and not name.strip():
         st.error(
             "Der Name des Schiffs darf nicht leer sein!",
