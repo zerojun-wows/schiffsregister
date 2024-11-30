@@ -48,6 +48,10 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def is_form_field_disabled(form_field_name: str) -> bool:
+    return st.session_state[form_field_name]
+
+
 def is_session_state_empty() -> bool:
     return len(st.session_state) == 0
 
