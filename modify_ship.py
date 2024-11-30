@@ -153,5 +153,6 @@ with st.form("modify_ship_form"):
             f"Das Schiff '{name}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
         )
+        reset_edit_form()
 
 st.write(st.session_state)
