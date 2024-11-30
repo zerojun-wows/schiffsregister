@@ -112,7 +112,10 @@ with st.form("modify_ship_form"):
     col3, col4 = st.columns(2)
 
     with col3:
-        submitted = st.form_submit_button("Änderungen übernehmen")
+        submitted = st.form_submit_button(
+            "Änderungen übernehmen",
+            disabled=is_form_field_disabled("edit_form_submit"),
+        )
 
     with col4:
         reset = st.form_submit_button(
