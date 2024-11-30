@@ -153,6 +153,12 @@ with st.form("modify_ship_form"):
             f"Das Schiff '{name}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
         )
-
+        set_form_field_disabled("edit_ship_nation", True)
+        set_form_field_disabled("edit_ship_type", True)
+        set_form_field_disabled("edit_ship_class", True)
+        set_form_field_disabled("edit_ship_tier", True)
+        set_form_field_disabled("edit_ship_name", True)
+        set_form_field_disabled("edit_form_submit", True)
+        set_form_field_disabled("edit_form_abort", True)
 
 st.write(st.session_state)
