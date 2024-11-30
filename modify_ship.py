@@ -48,7 +48,7 @@ select_edit_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-if st.button("Gewähltes Schiff bearbeiten"):
+if st.button("Gewähltes Schiff bearbeiten") and select_edit_index:
     selected_ship_data = get_current_ship_register_list()[select_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
@@ -160,5 +160,6 @@ with st.form("modify_ship_form"):
         set_form_field_disabled("edit_ship_name", True)
         set_form_field_disabled("edit_form_submit", True)
         set_form_field_disabled("edit_form_abort", True)
+
 
 st.write(st.session_state)
