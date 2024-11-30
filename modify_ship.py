@@ -140,7 +140,7 @@ with st.form("modify_ship_form"):
             icon=":material/error:",
         )
 
-    if all([submitted, name.strip(), nation, typ, klasse, stufe]):
+    if submitted and all([name.strip(), nation, typ, klasse, stufe]):
         ship_data = {
             "Nation": nation,
             "Typ": typ,
