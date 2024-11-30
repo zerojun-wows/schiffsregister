@@ -60,9 +60,6 @@ with st.form("modify_ship_form"):
             "Nation",
             options=nations_order_dict.keys(),
             index=None,
-            # index=nations_order_dict[selected_ship_data["Nation"]] - 1
-            # if selected_ship_data
-            # else None,
             key="edit_ship_nation",
             placeholder="Bitte eine Auswahl treffen!",
             disabled=is_form_field_disabled("edit_ship_nation"),
@@ -71,9 +68,6 @@ with st.form("modify_ship_form"):
             "Typ",
             options=type_option_list,
             index=None,
-            # index=type_option_list.index(selected_ship_data["Typ"])
-            # if selected_ship_data
-            # else None,
             key="edit_ship_type",
             placeholder="Bitte eine Auswahl treffen!",
             disabled=is_form_field_disabled("edit_ship_type"),
@@ -82,9 +76,6 @@ with st.form("modify_ship_form"):
             "Klasse",
             options=class_order_dict.keys(),
             index=None,
-            # index=class_order_dict[selected_ship_data["Klasse"]] - 1
-            # if selected_ship_data
-            # else None,
             key="edit_ship_class",
             placeholder="Bitte eine Auswahl treffen!",
             disabled=is_form_field_disabled("edit_ship_class"),
@@ -95,16 +86,12 @@ with st.form("modify_ship_form"):
             "Stufe",
             options=tier_order_dict.keys(),
             index=None,
-            # index=tier_order_dict[selected_ship_data["Stufe"]]
-            # if selected_ship_data
-            # else None,
             key="edit_ship_tier",
             placeholder="Bitte eine Auswahl treffen!",
             disabled=is_form_field_disabled("edit_ship_tier"),
         )
         name = st.text_input(
             "Name",
-            # value=selected_ship_data["Name"],
             key="edit_ship_name",
             disabled=is_form_field_disabled("edit_ship_name"),
         )
