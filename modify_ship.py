@@ -52,13 +52,13 @@ edit_button = st.button("Gewähltes Schiff bearbeiten")
 
 st.write(selected_edit_index)
 
-if edit_button and not selected_edit_index:
+if edit_button and selected_edit_index is None:
     st.error(
         "Die Auswahl eines Schiffes ist erforderlich!",
         icon=":material/error:",
     )
 
-if edit_button and (selected_edit_index is not None):
+if edit_button and (selected_edit_index => 0):
     selected_ship_data = get_current_ship_register_list()[selected_edit_index]
     set_edit_form_values(
         selected_ship_data["Nation"],
