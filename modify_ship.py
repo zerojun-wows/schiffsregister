@@ -12,6 +12,7 @@ from session_state_routines import (
     set_edit_form_values,
     is_form_field_disabled,
     set_form_field_disabled,
+    modify_ship_in_current_register,
 )
 
 
@@ -140,6 +141,14 @@ with st.form("modify_ship_form"):
         )
 
     if all([submitted, name.strip(), nation, typ, klasse, stufe]):
+        ship_data = {
+            "Nation": nation,
+            "Typ": typ,
+            "Klasse": klasse,
+            "Stufe": stufe,
+            "Name": name,
+        }
+
         st.success(
             f"Das Schiff '{selected_ship_data['Name']}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
