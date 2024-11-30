@@ -69,6 +69,7 @@ with st.form("modify_ship_form"):
             # else None,
             key="edit_ship_type",
             placeholder="Bitte eine Auswahl treffen!",
+            disabled=is_form_field_disabled("edit_ship_type"),
         )
         klasse = st.selectbox(
             "Klasse",
@@ -79,6 +80,7 @@ with st.form("modify_ship_form"):
             # else None,
             key="edit_ship_class",
             placeholder="Bitte eine Auswahl treffen!",
+            disabled=is_form_field_disabled("edit_ship_class"),
         )
 
     with col2:
@@ -91,11 +93,13 @@ with st.form("modify_ship_form"):
             # else None,
             key="edit_ship_tier",
             placeholder="Bitte eine Auswahl treffen!",
+            disabled=is_form_field_disabled("edit_ship_tier"),
         )
         name = st.text_input(
             "Name",
             # value=selected_ship_data["Name"],
             key="edit_ship_name",
+            disabled=is_form_field_disabled("edit_ship_name"),
         )
 
     col3, col4 = st.columns(2)
