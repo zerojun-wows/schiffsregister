@@ -52,6 +52,7 @@ with st.form("modify_ship_form"):
         nation = st.selectbox(
             "Nation",
             options=nations_order_dict.keys(),
+            index=None,
             # index=nations_order_dict[selected_ship_data["Nation"]] - 1
             # if selected_ship_data
             # else None,
@@ -62,6 +63,7 @@ with st.form("modify_ship_form"):
         typ = st.selectbox(
             "Typ",
             options=type_option_list,
+            index=None,
             # index=type_option_list.index(selected_ship_data["Typ"])
             # if selected_ship_data
             # else None,
@@ -71,6 +73,7 @@ with st.form("modify_ship_form"):
         klasse = st.selectbox(
             "Klasse",
             options=class_order_dict.keys(),
+            index=None,
             # index=class_order_dict[selected_ship_data["Klasse"]] - 1
             # if selected_ship_data
             # else None,
@@ -82,6 +85,7 @@ with st.form("modify_ship_form"):
         stufe = st.selectbox(
             "Stufe",
             options=tier_order_dict.keys(),
+            index=None,
             # index=tier_order_dict[selected_ship_data["Stufe"]]
             # if selected_ship_data
             # else None,
