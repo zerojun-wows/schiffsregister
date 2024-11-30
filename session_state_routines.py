@@ -32,6 +32,10 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 
+def modify_ship_in_current_register(index: int, ship_data: dict):
+    st.session_state.ship_register_current[index] = ship_data
+
+
 def get_current_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_current, columns=all_columns
