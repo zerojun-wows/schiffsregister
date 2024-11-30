@@ -29,6 +29,7 @@ select_edit_index = st.selectbox(
     options=range(len(get_current_ship_register_list())),
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
     index=None,
+    placeholder="Bitte eine Auswahl treffen!",
 )
 
 if st.button("Gewähltes Schiff bearbeiten"):
