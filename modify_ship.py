@@ -148,7 +148,7 @@ with st.form("modify_ship_form"):
             "Stufe": stufe,
             "Name": name,
         }
-
+        modify_ship_in_current_register(select_edit_index, ship_data)
         st.success(
             f"Das Schiff '{selected_ship_data['Name']}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
