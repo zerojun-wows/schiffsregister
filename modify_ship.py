@@ -90,7 +90,7 @@ if edit_button and (
         selected_ship_data["Stufe"],
         selected_ship_data["Name"],
     )
-
+    enable_edit_form()
 
 with st.form("modify_ship_form"):
     col1, col2 = st.columns(2)
@@ -179,13 +179,7 @@ with st.form("modify_ship_form"):
             f"Das Schiff '{name}' wurde erfolgreich geändert!",
             icon=":material/check_circle:",
         )
-        set_form_field_disabled("edit_ship_nation", True)
-        set_form_field_disabled("edit_ship_type", True)
-        set_form_field_disabled("edit_ship_class", True)
-        set_form_field_disabled("edit_ship_tier", True)
-        set_form_field_disabled("edit_ship_name", True)
-        set_form_field_disabled("edit_form_submit", True)
-        set_form_field_disabled("edit_form_abort", True)
+        disable_edit_form()
 
         # st.rerun()
 
