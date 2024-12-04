@@ -41,4 +41,8 @@ if remove_button and (
         "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
         "</tr><tr>"
         f"<td>{selected_ship_data['Nation']}</td>"
+        f"<td>{selected_ship_data['Typ']}</td>"
+        f"<td>{selected_ship_data['Klasse']}</td>"
+        f"<td>{selected_ship_data['Stufe']}</td>"
+        f"<td>{selected_ship_data['Name']}</td>"
     )
