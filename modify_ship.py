@@ -71,8 +71,6 @@ selected_edit_index = st.selectbox(
 
 edit_button = st.button("Gewähltes Schiff bearbeiten")
 
-st.write(selected_edit_index)
-
 if edit_button and selected_edit_index is None:
     st.error(
         "Die Auswahl eines Schiffes ist erforderlich!",
@@ -180,5 +178,3 @@ with st.form("modify_ship_form"):
             icon=":material/check_circle:",
         )
         disable_edit_form()
-
-st.write(st.session_state)
