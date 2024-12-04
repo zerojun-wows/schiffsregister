@@ -36,3 +36,9 @@ if remove_button and (
     selected_remove_index is not None and selected_remove_index >= 0
 ):
     selected_ship_data = get_current_ship_register_list()[selected_remove_index]
+    st.html(
+        "<table><tr>"
+        "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
+        "</tr><tr>"
+        f"<td>{selected_ship_data['Nation']}</td>"
+    )
