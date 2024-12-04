@@ -181,6 +181,4 @@ with st.form("modify_ship_form"):
         )
         disable_edit_form()
 
-        # st.rerun()
-
 st.write(st.session_state)
