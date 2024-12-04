@@ -31,3 +31,8 @@ if remove_button and selected_remove_index is None:
         "Die Auswahl eines Schiffes ist erforderlich!",
         icon=":material/error:",
     )
+
+if remove_button and (
+    selected_remove_index is not None and selected_remove_index >= 0
+):
+    selected_ship_data = get_current_ship_register_list()[selected_remove_index]
