@@ -46,11 +46,15 @@ if remove_button and (
         f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
     )
-    remove_request = st.radio(
-        "Wollen Sie dieses Schiff endgültig entfernen?",
-        ["Nein", "Ja"],
-        index=0,
+
+    remove_confirmation = st.checkbox(
+        f"Bestätige {selected_ship_data['Name']} zu entfernen"
     )
+    # remove_request = st.radio(
+    #    "Wollen Sie dieses Schiff endgültig entfernen?",
+    #    ["Nein", "Ja"],
+    #    index=0,
+    # )
     # if remove_request == "Ja" and st.button(
     #    f"{selected_ship_data['Name']} endgültig löschen"
     # ):
