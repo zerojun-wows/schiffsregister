@@ -51,7 +51,7 @@ if remove_button and (
         ["Nein", "Ja"],
         index=0,
     )
-    if remove_request == "Ja" and st.button(
-        f"{selected_ship_data['Name']} endgültig löschen"
-    ):
-        pass
+    # if remove_request == "Ja" and st.button(
+    #    f"{selected_ship_data['Name']} endgültig löschen"
+    # ):
+    #    pass
