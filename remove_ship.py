@@ -25,7 +25,7 @@ selected_remove_index = st.selectbox(
 
 remove_button = st.button("Gewähltes Schiff entfernen")
 
-if edit_button and selected_edit_index is None:
+if remove_button and selected_remove_index is None:
     st.error(
         "Die Auswahl eines Schiffes ist erforderlich!",
         icon=":material/error:",
