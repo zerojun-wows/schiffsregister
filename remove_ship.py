@@ -42,10 +42,11 @@ if selected_remove_index is not None and selected_remove_index >= 0:
     remove_button = st.button("Gewähltes Schiff entfernen")
 
     if remove_button:
-        st.write(
+        st.subheader(
             f"Wollen sie das Schiff {selected_ship_data['Name']}"
             " endgültig entfernen?"
         )
+
 
 # if remove_button and selected_remove_index is None:
 #     st.error(
