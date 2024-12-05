@@ -55,7 +55,6 @@ if selected_remove_index is not None and selected_remove_index >= 0:
             f"Ja, {selected_ship_data['Name']} engültig entfernen. "
         )
         if confirm:
-            pass
+            st.success(f"Schiff '{selected_ship}' wurde erfolgreich gelöscht!")
         elif abort:
             st.info("Löschvorgang abgebrochen.")
-            clear_remove_index()
