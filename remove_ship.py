@@ -56,38 +56,4 @@ if selected_remove_index is not None and selected_remove_index >= 0:
         if confirm:
             pass
         elif abort:
-            st.toast("Löschvorgang abgebrochen.")
-
-# if remove_button and selected_remove_index is None:
-#     st.error(
-#        "Die Auswahl eines Schiffes ist erforderlich!",
-#        icon=":material/error:",
-#    )
-
-# if remove_button and (
-#    selected_remove_index is not None and selected_remove_index >= 0
-# ):
-#    selected_ship_data = get_current_ship_register_list()[selected_remove_index]
-#    st.html(
-#        "<table width='100%'><tr>"
-#        "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
-#        "</tr><tr>"
-#        f"<td>&emsp;{selected_ship_data['Nation']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Typ']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Name']}</td>"
-#    )
-#    remove_confirmation = st.checkbox(
-#        f"Bestätige {selected_ship_data['Name']} zu entfernen"
-#    )
-
-# remove_request = st.radio(
-#    "Wollen Sie dieses Schiff endgültig entfernen?",
-#    ["Nein", "Ja"],
-#    index=0,
-# )
-# if remove_request == "Ja" and st.button(
-#    f"{selected_ship_data['Name']} endgültig löschen"
-# ):
-#    pass
+            st.info("Löschvorgang abgebrochen.")
