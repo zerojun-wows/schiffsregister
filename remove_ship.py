@@ -3,6 +3,7 @@ import streamlit as st
 from session_state_routines import (
     check_register_open,
     get_current_ship_register_list,
+    clear_remove_index,
 )
 
 st.title("Schiffsregister - Schiff entfernen")
