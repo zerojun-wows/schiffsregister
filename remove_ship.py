@@ -39,7 +39,7 @@ if selected_remove_index is not None and selected_remove_index >= 0:
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
     )
 
-# remove_button = st.button("Gewähltes Schiff entfernen")
+remove_button = st.button("Gewähltes Schiff entfernen")
 
 # if remove_button and selected_remove_index is None:
 #     st.error(
