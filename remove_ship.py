@@ -21,7 +21,7 @@ selected_remove_index = st.selectbox(
     options=range(len(get_current_ship_register_list())),
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
-    key="remove_selected_index"
+    key="remove_selected_index",
     # on_change=,
     placeholder="Bitte eine Auswahl treffen!",
 )
@@ -65,12 +65,12 @@ if selected_remove_index is not None and selected_remove_index >= 0:
 #        f"Bestätige {selected_ship_data['Name']} zu entfernen"
 #    )
 
-    # remove_request = st.radio(
-    #    "Wollen Sie dieses Schiff endgültig entfernen?",
-    #    ["Nein", "Ja"],
-    #    index=0,
-    # )
-    # if remove_request == "Ja" and st.button(
-    #    f"{selected_ship_data['Name']} endgültig löschen"
-    # ):
-    #    pass
+# remove_request = st.radio(
+#    "Wollen Sie dieses Schiff endgültig entfernen?",
+#    ["Nein", "Ja"],
+#    index=0,
+# )
+# if remove_request == "Ja" and st.button(
+#    f"{selected_ship_data['Name']} endgültig löschen"
+# ):
+#    pass
