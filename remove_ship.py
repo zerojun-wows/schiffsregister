@@ -58,3 +58,4 @@ if selected_remove_index is not None and selected_remove_index >= 0:
             pass
         elif abort:
             st.info("Löschvorgang abgebrochen.")
+            clear_remove_index()
