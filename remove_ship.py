@@ -22,7 +22,7 @@ selected_remove_index = st.selectbox(
     options=range(len(get_current_ship_register_list())),
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
-    key="remove_selected_index",
+    # key="remove_selected_index",
     # on_change=,
     placeholder="Bitte eine Auswahl treffen!",
 )
@@ -56,5 +56,6 @@ if selected_remove_index is not None and selected_remove_index >= 0:
         )
         if confirm:
             st.success(f"Schiff '{selected_ship}' wurde erfolgreich gelöscht!")
+
         elif abort:
             st.info("Löschvorgang abgebrochen.")
