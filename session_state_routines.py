@@ -24,6 +24,10 @@ def check_register_open() -> None:
         st.stop()
 
 
+def clear_remove_index() -> None:
+    st.session_state.remove_selected_index = None
+
+
 def clear_session_state() -> None:
     """
     Removes all keys and values from session_state
@@ -158,5 +162,5 @@ def setup_session_state() -> None:
     if "edit_form_abort_enabled" not in st.session_state:
         st.session_state.edit_form_abort_disabled = True
 
-    if "remove_selected_ship!" not in st.session_state:
-        st.session_state.remove_selected_ship = None
+    if "remove_selected_index" not in st.session_state:
+        st.session_state.remove_selected_index = None
