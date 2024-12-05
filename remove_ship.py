@@ -53,6 +53,10 @@ if selected_remove_index is not None and selected_remove_index >= 0:
         confirm = cols[1].button(
             f"Ja, {selected_ship_data['Name']} engültig entfernen. "
         )
+        if confirm:
+            pass
+        elif abort:
+            st.info("Löschvorgang abgebrochen.")
 
 # if remove_button and selected_remove_index is None:
 #     st.error(
