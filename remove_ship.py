@@ -46,7 +46,11 @@ if selected_remove_index is not None and selected_remove_index >= 0:
             f"Wollen sie das Schiff {selected_ship_data['Name']}"
             " endgültig entfernen?"
         )
-
+        cols = st.columns(2)
+        abort = col[0].button("Abbrechen")
+        confirm = col[1].button(
+            f"Ja, {selected_ship_data['Name']} engültig entfernen. "
+        )
 
 # if remove_button and selected_remove_index is None:
 #     st.error(
