@@ -56,7 +56,7 @@ if selected_remove_index is not None and selected_remove_index >= 0:
         if confirm:
             pass
         elif abort:
-            st.info("Löschvorgang abgebrochen.")
+            st.toast("Löschvorgang abgebrochen.")
 
 # if remove_button and selected_remove_index is None:
 #     st.error(
