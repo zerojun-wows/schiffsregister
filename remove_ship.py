@@ -21,16 +21,19 @@ selected_remove_index = st.selectbox(
     options=range(len(get_current_ship_register_list())),
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
+    # key="remove_selected_ship"
+    # on_change=,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-remove_button = st.button("Gewähltes Schiff entfernen")
 
-if remove_button and selected_remove_index is None:
-    st.error(
-        "Die Auswahl eines Schiffes ist erforderlich!",
-        icon=":material/error:",
-    )
+# remove_button = st.button("Gewähltes Schiff entfernen")
+
+# if remove_button and selected_remove_index is None:
+#     st.error(
+#        "Die Auswahl eines Schiffes ist erforderlich!",
+#        icon=":material/error:",
+#    )
 
 if remove_button and (
     selected_remove_index is not None and selected_remove_index >= 0

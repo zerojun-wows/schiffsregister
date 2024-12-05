@@ -56,7 +56,7 @@ def is_session_state_empty() -> bool:
     return len(st.session_state) == 0
 
 
-def modify_ship_in_current_register(index: int, ship_data: dict):
+def modify_ship_in_current_register(index: int, ship_data: dict) -> None:
     st.session_state.ship_register_current[index] = ship_data
 
 
@@ -157,3 +157,6 @@ def setup_session_state() -> None:
 
     if "edit_form_abort_enabled" not in st.session_state:
         st.session_state.edit_form_abort_disabled = True
+
+    if "remove_selected_ship!" not in st.session_state:
+        st.session_state.remove_selected_ship = None
