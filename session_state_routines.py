@@ -162,6 +162,10 @@ def setup_session_state() -> None:
     if "edit_form_abort_enabled" not in st.session_state:
         st.session_state.edit_form_abort_disabled = True
 
+    setup_session_state_for_remove_ship()
+
+
+def setup_session_state_for_remove_ship():
     if "remove_selected_ship_index" not in st.session_state:
         st.session_state.remove_selected_ship_index = None
 
