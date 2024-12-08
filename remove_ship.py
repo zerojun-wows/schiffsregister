@@ -6,6 +6,19 @@ from session_state_routines import (
     clear_remove_index,
 )
 
+def display_ship_information() -> None:
+    selected_ship_data = get_current_ship_register_list()[selected_remove_index]
+    st.html(
+        "<table width='100%'><tr>"
+        "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
+        "</tr><tr>"
+        f"<td>&emsp;{selected_ship_data['Nation']}</td>"
+        f"<td>&emsp;{selected_ship_data['Typ']}</td>"
+        f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
+        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
+        f"<td>&emsp;{selected_ship_data['Name']}</td>"
+    )
+
 st.title("Schiffsregister - Schiff entfernen")
 
 check_register_open()
@@ -23,7 +36,7 @@ selected_remove_index = st.selectbox(
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
     # key="remove_selected_index",
-    # on_change=,
+    on_change=display_ship_infromation,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
