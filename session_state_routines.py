@@ -24,8 +24,8 @@ def check_register_open() -> None:
         st.stop()
 
 
-def clear_remove_index() -> None:
-    st.session_state.remove_selected_index = None
+def clear_remove_ship_index() -> None:
+    st.session_state.remove_selected_ship_index = None
 
 
 def clear_session_state() -> None:
