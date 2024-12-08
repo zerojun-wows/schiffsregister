@@ -58,22 +58,22 @@ if selected_remove_index is not None and selected_remove_index >= 0:
     #    f"<td>&emsp;{selected_ship_data['Name']}</td>"
     # )
 
-    remove_button = st.button("Gewähltes Schiff entfernen")
+#    remove_button = st.button("Gewähltes Schiff entfernen")
 
-    if remove_button:
-        st.subheader(
-            f"Wollen sie das Schiff {selected_ship_data['Name']}"
-            " endgültig entfernen?"
-        )
-        cols = st.columns(2)
-        abort = cols[0].button(
-            f"Nein, {selected_ship_data['Name']}  nicht entfernen."
-        )
-        confirm = cols[1].button(
-            f"Ja, {selected_ship_data['Name']} engültig entfernen. "
-        )
-        if confirm:
-            st.success(f"Schiff '{selected_ship}' wurde erfolgreich gelöscht!")
-
-        elif abort:
-            st.info("Löschvorgang abgebrochen.")
+#    if remove_button:
+#        st.subheader(
+#            f"Wollen sie das Schiff {selected_ship_data['Name']}"
+#            " endgültig entfernen?"
+#        )
+#        cols = st.columns(2)
+#        abort = cols[0].button(
+#            f"Nein, {selected_ship_data['Name']}  nicht entfernen."
+#        )
+#        confirm = cols[1].button(
+#            f"Ja, {selected_ship_data['Name']} engültig entfernen. "
+#        )
+#       if confirm:
+#            st.success(f"Schiff '{selected_ship}' wurde erfolgreich gelöscht!")
+#
+#        elif abort:
+#            st.info("Löschvorgang abgebrochen.")
