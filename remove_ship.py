@@ -3,8 +3,9 @@ import streamlit as st
 from session_state_routines import (
     check_register_open,
     get_current_ship_register_list,
-    clear_remove_index,
+    #    clear_remove_index,
 )
+
 
 def display_ship_information() -> None:
     selected_ship_data = get_current_ship_register_list()[selected_remove_index]
@@ -18,6 +19,7 @@ def display_ship_information() -> None:
         f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
     )
+
 
 st.title("Schiffsregister - Schiff entfernen")
 
