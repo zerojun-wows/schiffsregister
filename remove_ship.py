@@ -23,7 +23,7 @@ def display_ship_information() -> None:
     #        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
     #        f"<td>&emsp;{selected_ship_data['Name']}</td>"
     #    )
-    pass
+    ship_information_placeholder.write(selected_remove_index)
 
 
 st.title("Schiffsregister - Schiff entfernen")
