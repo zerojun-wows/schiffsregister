@@ -38,7 +38,7 @@ selected_remove_index = st.selectbox(
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
     # key="remove_selected_index",
-    on_change=display_ship_infromation,
+    on_change=display_ship_information,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
