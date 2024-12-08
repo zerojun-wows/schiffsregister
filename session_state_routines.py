@@ -145,8 +145,8 @@ def setup_session_state() -> None:
     setup_session_state_for_remove_ship()
 
 
-def setup_session_state_for_edit_ship():
-        if "edit_ship_nation_disabled" not in st.session_state:
+def setup_session_state_for_edit_ship() -> None:
+    if "edit_ship_nation_disabled" not in st.session_state:
         st.session_state.edit_ship_nation_disabled = True
 
     if "edit_ship_type_disabled" not in st.session_state:
@@ -166,7 +166,7 @@ def setup_session_state_for_edit_ship():
 
     if "edit_form_abort_enabled" not in st.session_state:
         st.session_state.edit_form_abort_disabled = True
-        
+
 
 def setup_session_state_for_remove_ship():
     if "remove_selected_ship_index" not in st.session_state:
