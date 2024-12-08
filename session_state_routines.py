@@ -164,3 +164,9 @@ def setup_session_state() -> None:
 
     if "remove_selected_ship_index" not in st.session_state:
         st.session_state.remove_selected_ship_index = None
+
+    if "remove_ship_data" not in st.session_state:
+        st.session_state.remove_ship_data = []
+
+    if "remove_ship_confirmation" not in st.session_state:
+        st.session_state.remove_ship_confirmation = False
