@@ -8,7 +8,7 @@ from session_state_routines import (
 
 
 def display_ship_information() -> None:
-    ship_information_placeholder.write(selected_remove_index)
+    #ship_information_placeholder.write(selected_remove_index)
     # if selected_remove_index is not None and selected_remove_index >= 0:
     #    selected_ship_data = get_current_ship_register_list()[
     #        selected_remove_index
@@ -46,7 +46,7 @@ selected_remove_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-ship_information_placeholder = st.empty()
+ship_information_placeholder = st.container()
 
 # if selected_remove_index is not None and selected_remove_index >= 0:
 # selected_ship_data = get_current_ship_register_list()[selected_remove_index]
