@@ -122,6 +122,10 @@ def set_original_ship_register(original_register_df: pd.DataFrame) -> None:
     )
 
 
+def set_remove_ship_confirmation(value: bool) -> None:
+    st.session_state.remove_ship_confirmation = value
+
+
 def setup_session_state() -> None:
     if "ship_register_original" not in st.session_state:
         st.session_state.ship_register_original = []
