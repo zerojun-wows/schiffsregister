@@ -24,7 +24,8 @@ def confirm_removal() -> None:
 
 
 def update_selectbox() -> None:
-    clear_remove_ship_index()
+    return
+    """
     return placeholder_selectbox.selectbox(
         "Auswahl des zu entfernenden Schiffes",
         options=range(len(get_current_ship_register_list())),
@@ -33,7 +34,7 @@ def update_selectbox() -> None:
         key="selected_remove_ship_index",
         on_change=select_ship,
         placeholder="Bitte eine Auswahl treffen!",
-    )
+    )"""
 
 
 st.title("Schiffsregister - Schiff entfernen")
@@ -51,6 +52,15 @@ placeholder_selectbox = st.empty()
 
 selected_remove_ship_index = update_selectbox()
 
+selected_remove_ship_index = st.selectbox(
+    "Auswahl des zu entfernenden Schiffes",
+    options=range(len(get_current_ship_register_list())),
+    index=None,
+    format_func=lambda i: get_current_ship_register_list()[i]["Name"],
+    key="selected_remove_ship_index",
+    on_change=select_ship,
+    placeholder="Bitte eine Auswahl treffen!",
+)
 
 if get_remove_ship_data():
     st.subheader("Details")
@@ -77,7 +87,6 @@ if get_remove_ship_data():
         set_remove_ship_data(None)
         set_remove_ship_confirmation(False)
         clear_remove_ship_index()
-        update_selectbox()
 
 
 st.write(st.session_state)
