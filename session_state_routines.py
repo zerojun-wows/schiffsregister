@@ -1,5 +1,5 @@
 """
-THis module contains interaction routines with st.session_state 
+This module contains interaction routines with st.session_state 
 """
 import pandas as pd
 import streamlit as st
