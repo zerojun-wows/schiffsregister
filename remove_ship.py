@@ -4,7 +4,12 @@ from session_state_routines import (
     check_register_open,
     get_current_ship_register_list,
     #    clear_remove_index,
+    set_remove_ship_confirmation,
 )
+
+
+def select_ship() -> None:
+    set_remove_ship_confirmation(False)
 
 
 # def display_ship_information() -> None:
@@ -42,7 +47,7 @@ selected_remove_index = st.selectbox(
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
     key="selected_remove_ship_index",
-    # on_change=display_ship_information,
+    on_change=select_ship,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
