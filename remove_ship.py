@@ -46,9 +46,10 @@ selected_remove_ship_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-if get_remove_ship_data():
+selected_ship_data = get_remove_ship_data()
+
+if selected_ship_data:
     st.subheader("Details")
-    selected_ship_data = get_remove_ship_data()
     st.html(
         "<table width='100%'><tr>"
         "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
