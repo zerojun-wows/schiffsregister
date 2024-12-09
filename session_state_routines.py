@@ -130,6 +130,13 @@ def set_remove_ship_confirmation(value: bool) -> None:
     st.session_state.remove_ship_confirmation = value
 
 
+def set_remove_ship_data(ship_index: int) -> None:
+    if ship_index is not None:
+        st.setup_session_state.remove_ship_data = (
+            get_current_ship_register_list[ship_index]
+        )
+
+
 def setup_session_state() -> None:
     if "ship_register_original" not in st.session_state:
         st.session_state.ship_register_original = []
