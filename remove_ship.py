@@ -84,7 +84,7 @@ if get_remove_ship_data():
 
     if is_remove_ship_confirmed():
         remove_ship_from_current_register(get_selected_remove_ship_index())
-        set_remove_ship_data([])
+        set_remove_ship_data(None)
         set_remove_ship_confirmation(False)
         clear_remove_ship_index()
 
