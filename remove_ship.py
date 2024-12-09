@@ -3,7 +3,7 @@ import streamlit as st
 from session_state_routines import (
     check_register_open,
     get_current_ship_register_list,
-    clear_remove_index,
+    clear_remove_ship_index,
     set_remove_ship_confirmation,
     get_selected_remove_ship_index,
     set_remove_ship_data,
@@ -86,7 +86,7 @@ if get_remove_ship_data():
         remove_ship_from_current_register(get_selected_remove_ship_index())
         set_remove_ship_data([])
         set_remove_ship_confirmation(False)
-        clear_remove_index()
+        clear_remove_ship_index()
 
 
 st.write(st.session_state)
