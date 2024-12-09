@@ -70,6 +70,11 @@ if get_remove_ship_data():
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
     )
 
+    st.html("<h5>Soll dieses Schiff endgültig entfernt werden?</h5>")
+    st.button(
+        f"Ja {selected_ship_data['Name']} endgültig löschen",
+        on_click=confirm_removal,
+    )
 
 st.write(st.session_state)
 
