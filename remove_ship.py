@@ -46,9 +46,7 @@ selected_remove_ship_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-selected_ship_data = get_remove_ship_data()
-
-if selected_ship_data:
+if selected_ship_data := get_remove_ship_data():
     st.subheader("Details")
     st.html(
         "<table width='100%'><tr>"
