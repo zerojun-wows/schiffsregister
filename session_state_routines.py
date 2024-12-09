@@ -52,6 +52,10 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def get_selected_remove_ship_index() -> int:
+    return st.session_state.selected_remove_ship_index
+
+
 def is_form_field_disabled(form_field_name: str) -> bool:
     return st.session_state[f"{form_field_name}_disabled"]
 
