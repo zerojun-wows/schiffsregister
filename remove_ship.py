@@ -35,24 +35,6 @@ def update_selectbox() -> None:
     )
 
 
-# def display_ship_information() -> None:
-# ship_information_placeholder.write(selected_remove_index)
-# if selected_remove_index is not None and selected_remove_index >= 0:
-#    selected_ship_data = get_current_ship_register_list()[
-#        selected_remove_index
-#    ]
-#    st.html(
-#        "<table width='100%'><tr>"
-#        "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
-#        "</tr><tr>"
-#        f"<td>&emsp;{selected_ship_data['Nation']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Typ']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
-#        f"<td>&emsp;{selected_ship_data['Name']}</td>"
-#    )
-
-
 st.title("Schiffsregister - Schiff entfernen")
 
 check_register_open()
@@ -68,15 +50,6 @@ placeholder_selectbox = st.empty()
 
 selected_remove_ship_index = update_selectbox()
 
-selected_remove_ship_index = st.selectbox(
-    "Auswahl des zu entfernenden Schiffes",
-    options=range(len(get_current_ship_register_list())),
-    index=None,
-    format_func=lambda i: get_current_ship_register_list()[i]["Name"],
-    key="selected_remove_ship_index",
-    on_change=select_ship,
-    placeholder="Bitte eine Auswahl treffen!",
-)
 
 if get_remove_ship_data():
     st.subheader("Details")
@@ -103,6 +76,7 @@ if get_remove_ship_data():
         set_remove_ship_data(None)
         set_remove_ship_confirmation(False)
         clear_remove_ship_index()
+        update_selectbox()
 
 
 st.write(st.session_state)
