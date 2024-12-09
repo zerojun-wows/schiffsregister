@@ -13,7 +13,7 @@ from session_state_routines import (
 def select_ship() -> None:
     set_remove_ship_confirmation(False)
     selected_ship_index = get_selected_remove_ship_index()
-    set_remove_ship_data(selected_ship_index)
+    # set_remove_ship_data(selected_ship_index)
 
 
 # def display_ship_information() -> None:
