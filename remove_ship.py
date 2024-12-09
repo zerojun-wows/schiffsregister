@@ -58,21 +58,23 @@ selected_remove_ship_index = st.selectbox(
 
 if get_remove_ship_data():
     st.subheader("Details")
+    selected_ship_data = get_remove_ship_data()
+    st.html(
+        "<table width='100%'><tr>"
+        "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
+        "</tr><tr>"
+        f"<td>&emsp;{selected_ship_data['Nation']}</td>"
+        f"<td>&emsp;{selected_ship_data['Typ']}</td>"
+        f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
+        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
+        f"<td>&emsp;{selected_ship_data['Name']}</td>"
+    )
+
 
 st.write(st.session_state)
 
 # if selected_remove_index is not None and selected_remove_index >= 0:
 # selected_ship_data = get_current_ship_register_list()[selected_remove_index]
-# st.html(
-#    "<table width='100%'><tr>"
-#    "<th>Nation</th><th>Typ</th><th>Klasse</th><th>Stufe</th><th>Name</th>"
-#    "</tr><tr>"
-#    f"<td>&emsp;{selected_ship_data['Nation']}</td>"
-#    f"<td>&emsp;{selected_ship_data['Typ']}</td>"
-#    f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
-#    f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
-#    f"<td>&emsp;{selected_ship_data['Name']}</td>"
-# )
 
 #    remove_button = st.button("Gewähltes Schiff entfernen")
 
