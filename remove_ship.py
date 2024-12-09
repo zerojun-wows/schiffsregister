@@ -55,6 +55,7 @@ selected_remove_ship_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
+st.write(st.session_state)
 
 # if selected_remove_index is not None and selected_remove_index >= 0:
 # selected_ship_data = get_current_ship_register_list()[selected_remove_index]
