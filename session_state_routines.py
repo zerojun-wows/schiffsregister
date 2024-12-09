@@ -52,6 +52,10 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def get_remove_ship_data():
+    return st.session_state.remove_ship_data
+
+
 def get_selected_remove_ship_index() -> int:
     return st.session_state.selected_remove_ship_index
 
