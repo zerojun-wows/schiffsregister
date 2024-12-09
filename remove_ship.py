@@ -5,12 +5,14 @@ from session_state_routines import (
     get_current_ship_register_list,
     #    clear_remove_index,
     set_remove_ship_confirmation,
+    get_selected_remove_ship_index,
 )
 
 
 def select_ship() -> None:
     set_remove_ship_confirmation(False)
     selected_ship_index = get_selected_remove_ship_index()
+    set_remove_ship_data(selected_ship_index)
 
 
 # def display_ship_information() -> None:
