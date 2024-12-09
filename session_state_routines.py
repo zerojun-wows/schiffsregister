@@ -64,6 +64,10 @@ def is_form_field_disabled(form_field_name: str) -> bool:
     return st.session_state[f"{form_field_name}_disabled"]
 
 
+def is_remove_ship_confirmed() -> bool:
+    return st.session_state.remove_ship_confirmation
+
+
 def is_session_state_empty() -> bool:
     return len(st.session_state) == 0
 
