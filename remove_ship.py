@@ -23,6 +23,18 @@ def confirm_removal() -> None:
     set_remove_ship_confirmation(True)
 
 
+def update_selectbox() -> None:
+    return placeholder_selectbox.selectbox(
+        "Auswahl des zu entfernenden Schiffes",
+        options=range(len(get_current_ship_register_list())),
+        index=None,
+        format_func=lambda i: get_current_ship_register_list()[i]["Name"],
+        key="selected_remove_ship_index",
+        on_change=select_ship,
+        placeholder="Bitte eine Auswahl treffen!",
+    )
+
+
 # def display_ship_information() -> None:
 # ship_information_placeholder.write(selected_remove_index)
 # if selected_remove_index is not None and selected_remove_index >= 0:
@@ -51,6 +63,10 @@ if not get_current_ship_register_list():
         icon=":material/warning:",
     )
     st.stop()
+
+placeholder_selectbox = st.empty()
+
+selected_remove_ship_index = update_selectbox()
 
 selected_remove_ship_index = st.selectbox(
     "Auswahl des zu entfernenden Schiffes",
