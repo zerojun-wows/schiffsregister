@@ -41,22 +41,20 @@ st.title("Schiffsregister - Schiff entfernen")
 
 check_register_open()
 
-if not get_current_ship_register_list():
+current_register_list = get_current_ship_register_list()
+
+if not current_register_list:
     st.warning(
         "Es gibt noch keine Einträge, die entfernt werden könnten",
         icon=":material/warning:",
     )
     st.stop()
 
-placeholder_selectbox = st.empty()
-
-selected_remove_ship_index = update_selectbox()
-
 selected_remove_ship_index = st.selectbox(
     "Auswahl des zu entfernenden Schiffes",
-    options=range(len(get_current_ship_register_list())),
+    options=range(len(current_register_list)),
     index=None,
-    format_func=lambda i: get_current_ship_register_list()[i]["Name"],
+    format_func=lambda i: current_register_list[i]["Name"],
     key="selected_remove_ship_index",
     on_change=select_ship,
     placeholder="Bitte eine Auswahl treffen!",
