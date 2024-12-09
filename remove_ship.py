@@ -55,6 +55,9 @@ selected_remove_ship_index = st.selectbox(
     placeholder="Bitte eine Auswahl treffen!",
 )
 
+if get_remove_ship_data():
+    st.subheader("Details")
+
 st.write(st.session_state)
 
 # if selected_remove_index is not None and selected_remove_index >= 0:
