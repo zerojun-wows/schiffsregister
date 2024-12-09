@@ -76,6 +76,10 @@ def modify_ship_in_current_register(index: int, ship_data: dict) -> None:
     st.session_state.ship_register_current[index] = ship_data
 
 
+def remove_ship_from_current_register(index: int) -> None:
+    del st.session_state.ship_register_current[index]
+
+
 def reset_add_form() -> None:
     st.session_state.add_ship_nation = None
     st.session_state.add_ship_type = None
