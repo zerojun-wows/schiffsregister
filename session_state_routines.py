@@ -135,6 +135,8 @@ def set_remove_ship_data(ship_index: int) -> None:
         st.session_state.remove_ship_data = get_current_ship_register_list()[
             ship_index
         ]
+    if ship_index is None:
+        st.session_state.remove_ship_data = []
 
 
 def setup_session_state() -> None:
