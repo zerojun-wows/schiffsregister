@@ -73,7 +73,15 @@ if get_remove_ship_data():
         f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
     )
-
+    st.table(
+        {
+            "Nation": [selected_ship_data["Nation"]],
+            "Typ": [selected_ship_data["Typ"]],
+            "Klasse": [selected_ship_data["Klasse"]],
+            "Stufe": [selected_ship_data["Stufe"]],
+            "Name": [selected_ship_data["Name"]],
+        }
+    )
     st.html("<h5>Soll dieses Schiff endgültig entfernt werden?</h5>")
     st.button(
         f"Ja {selected_ship_data['Name']} endgültig löschen",
