@@ -17,6 +17,10 @@ def select_ship() -> None:
     set_remove_ship_data(selected_ship_index)
 
 
+def confirm_removal() -> None:
+    set_remove_ship_confirmation(True)
+
+
 # def display_ship_information() -> None:
 # ship_information_placeholder.write(selected_remove_index)
 # if selected_remove_index is not None and selected_remove_index >= 0:
