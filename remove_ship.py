@@ -23,7 +23,6 @@ def display_ship_information() -> None:
     #        f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
     #        f"<td>&emsp;{selected_ship_data['Name']}</td>"
     #    )
-    ship_information_placeholder.write(selected_remove_index)
 
 
 st.title("Schiffsregister - Schiff entfernen")
@@ -42,12 +41,12 @@ selected_remove_index = st.selectbox(
     options=range(len(get_current_ship_register_list())),
     index=None,
     format_func=lambda i: get_current_ship_register_list()[i]["Name"],
-    # key="remove_selected_index",
+    key="selected_remove_ship_index",
     on_change=display_ship_information,
     placeholder="Bitte eine Auswahl treffen!",
 )
 
-ship_information_placeholder = st.container()
+
 
 # if selected_remove_index is not None and selected_remove_index >= 0:
 # selected_ship_data = get_current_ship_register_list()[selected_remove_index]
