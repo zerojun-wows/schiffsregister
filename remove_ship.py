@@ -6,6 +6,7 @@ from session_state_routines import (
     #    clear_remove_index,
     set_remove_ship_confirmation,
     get_selected_remove_ship_index,
+    set_remove_ship_data,
 )
 
 
