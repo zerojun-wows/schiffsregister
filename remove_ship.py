@@ -8,6 +8,8 @@ from session_state_routines import (
     get_selected_remove_ship_index,
     set_remove_ship_data,
     get_remove_ship_data,
+    is_remove_ship_confirmed,
+    remove_ship_from_current_register,
 )
 
 
@@ -79,6 +81,10 @@ if get_remove_ship_data():
         f"Ja {selected_ship_data['Name']} endgültig löschen",
         on_click=confirm_removal,
     )
+
+    if is_remove_ship_confirmed():
+        remove_ship_from_current_register(get_selected_remove_ship_index())
+
 
 st.write(st.session_state)
 
