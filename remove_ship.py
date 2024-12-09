@@ -7,6 +7,7 @@ from session_state_routines import (
     set_remove_ship_confirmation,
     get_selected_remove_ship_index,
     set_remove_ship_data,
+    get_remove_ship_data,
 )
 
 
