@@ -24,6 +24,7 @@ def confirm_removal() -> None:
 
 
 def update_selectbox() -> None:
+    clear_remove_ship_index()
     return placeholder_selectbox.selectbox(
         "Auswahl des zu entfernenden Schiffes",
         options=range(len(get_current_ship_register_list())),
