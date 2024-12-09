@@ -23,20 +23,6 @@ def confirm_removal() -> None:
     set_remove_ship_confirmation(True)
 
 
-def update_selectbox() -> None:
-    return
-    """
-    return placeholder_selectbox.selectbox(
-        "Auswahl des zu entfernenden Schiffes",
-        options=range(len(get_current_ship_register_list())),
-        index=None,
-        format_func=lambda i: get_current_ship_register_list()[i]["Name"],
-        key="selected_remove_ship_index",
-        on_change=select_ship,
-        placeholder="Bitte eine Auswahl treffen!",
-    )"""
-
-
 st.title("Schiffsregister - Schiff entfernen")
 
 check_register_open()
@@ -72,15 +58,6 @@ if get_remove_ship_data():
         f"<td>&emsp;{selected_ship_data['Klasse']}</td>"
         f"<td>&emsp;{selected_ship_data['Stufe']}</td>"
         f"<td>&emsp;{selected_ship_data['Name']}</td>"
-    )
-    st.table(
-        {
-            "Nation": [selected_ship_data["Nation"]],
-            "Typ": [selected_ship_data["Typ"]],
-            "Klasse": [selected_ship_data["Klasse"]],
-            "Stufe": [selected_ship_data["Stufe"]],
-            "Name": [selected_ship_data["Name"]],
-        }
     )
     st.html("<h5>Soll dieses Schiff endgültig entfernt werden?</h5>")
     st.button(
