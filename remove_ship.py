@@ -10,6 +10,7 @@ from session_state_routines import (
 
 def select_ship() -> None:
     set_remove_ship_confirmation(False)
+    selected_ship_index = get_selected_remove_ship_index()
 
 
 # def display_ship_information() -> None:
@@ -41,7 +42,7 @@ if not get_current_ship_register_list():
     )
     st.stop()
 
-selected_remove_index = st.selectbox(
+selected_remove_ship_index = st.selectbox(
     "Auswahl des zu entfernenden Schiffes",
     options=range(len(get_current_ship_register_list())),
     index=None,
