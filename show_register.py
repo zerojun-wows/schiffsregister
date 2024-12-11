@@ -5,6 +5,7 @@ from session_state_routines import (
     get_current_ship_register_dataframe,
     get_additions_dataframe,
     get_modifications_dataframe,
+    get_removals_dataframe,
 )
 
 st.title("Schiffsregister - Ansicht")
@@ -42,6 +43,6 @@ st.subheader("Abgänge")
 if current_ship_register_df.empty:
     st.info("Keine Abgänge vorhanden", icon=":material/info:")
 else:
-    pass
+    st.dataframe(get_removals_dataframe())
 
 st.write(st.session_state)
