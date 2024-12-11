@@ -24,7 +24,7 @@ else:
 # additions
 st.subheader("Zugänge")
 
-if current_ship_register_df.empty:
+if current_ship_register_df.empty or get_additions_dataframe().empty:
     st.info("Keine Zugänge vorhanden", icon=":material/info:")
 else:
     st.dataframe(get_additions_dataframe())
