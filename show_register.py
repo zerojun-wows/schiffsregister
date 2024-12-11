@@ -40,7 +40,7 @@ else:
 # removals
 st.subheader("Abgänge")
 
-if current_ship_register_df.empty:
+if current_ship_register_df.empty or get_removals_dataframe().empty:
     st.info("Keine Abgänge vorhanden", icon=":material/info:")
 else:
     st.dataframe(get_removals_dataframe())
