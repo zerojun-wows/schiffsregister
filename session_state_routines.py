@@ -68,7 +68,7 @@ def get_modifications_dataframe() -> pd.DataFrame:
         current_register_df.index
     )
     st.write(common_indices)
-    if not original_register_df.empty:
+    if not original_register_df.empty and not current_register_df.empty:
         st.write(
             original_register_df[common_indices].compare(
                 current_register_df.loc[common_indices]
