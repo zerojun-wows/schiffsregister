@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+from data_config import main_columns
 from session_state_routines import (
     check_register_open,
     get_current_ship_register_dataframe,
