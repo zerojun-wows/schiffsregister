@@ -68,6 +68,8 @@ def get_modifications_dataframe() -> pd.DataFrame:
         return original_register_df[common_indices].compare(
             current_register_df.loc[common_indices]
         )
+    else:
+        return original_register_df
 
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
