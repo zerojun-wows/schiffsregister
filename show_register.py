@@ -21,8 +21,10 @@ else:
 st.subheader("Zugänge")
 
 # additions
-st.info("Keine Zugänge vorhanden", icon=":material/info:")
-
+if current_ship_register_df.empty:
+    st.info("Keine Zugänge vorhanden", icon=":material/info:")
+else:
+    
 st.subheader("Änderungen")
 
 # modifications
