@@ -61,14 +61,14 @@ def get_modifications_dataframe() -> pd.DataFrame:
     original_register_df = get_original_ship_register_dataframe()
     current_register_df = get_current_ship_register_dataframe()
 
-    common_indices = original_register_df.index.intersection(current_register_df.index)
-    
-     gemeinsame_indizes = original_df.index.intersection(aktuell_df.index)
+    common_indices = original_register_df.index.intersection(
+        current_register_df.index
+    )
 
-        # Unterschiede identifizieren
-        changes_df = original_df.loc[gemeinsame_indizes].compare(
-            aktuell_df.loc[gemeinsame_indizes]
-        )
+    return original_register_df[common_indices].compare(
+        current_register_df.loc[common_indices]
+    )
+
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
