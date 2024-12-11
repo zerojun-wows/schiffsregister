@@ -20,25 +20,28 @@ if current_ship_register_df.empty:
 else:
     st.dataframe(current_ship_register_df)
 
+# additions
 st.subheader("Zugänge")
 
-# additions
 if current_ship_register_df.empty:
     st.info("Keine Zugänge vorhanden", icon=":material/info:")
 else:
     st.dataframe(get_additions_dataframe())
 
+# modifications
 st.subheader("Änderungen")
 
-# get_modifications_dataframe
 if current_ship_register_df.empty:
     st.info("Keine Änderungen vorhanden", icon=":material/info:")
 else:
     st.dataframe(get_modifications_dataframe())
 
+# removals
 st.subheader("Abgänge")
 
-# removals
-st.info("Keine Abgänge vorhanden", icon=":material/info:")
+if current_ship_register_df.empty:
+    st.info("Keine Abgänge vorhanden", icon=":material/info:")
+else:
+    pass
 
 st.write(st.session_state)
