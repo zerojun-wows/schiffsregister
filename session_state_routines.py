@@ -57,6 +57,19 @@ def get_current_ship_register_list() -> list:
     return st.session_state.ship_register_current
 
 
+def get_modifications_dataframe() -> pd.DataFrame:
+    original_register_df = get_original_ship_register_dataframe()
+    current_register_df = get_current_ship_register_dataframe()
+
+    common_indices = original_register_df.index.intersection(current_register_df.index)
+    
+     gemeinsame_indizes = original_df.index.intersection(aktuell_df.index)
+
+        # Unterschiede identifizieren
+        changes_df = original_df.loc[gemeinsame_indizes].compare(
+            aktuell_df.loc[gemeinsame_indizes]
+        )
+
 def get_original_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_original, columns=all_columns
