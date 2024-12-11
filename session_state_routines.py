@@ -67,6 +67,7 @@ def get_modifications_dataframe() -> pd.DataFrame:
     common_indices = original_register_df.index.intersection(
         current_register_df.index
     )
+    st.write(common_indices)
     if not original_register_df.empty:
         return original_register_df[common_indices].compare(
             current_register_df.loc[common_indices]
