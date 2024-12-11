@@ -36,6 +36,15 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 
+def get_additions_dataframe() -> pd.Dataframe:
+    original_register_df = get_original_ship_register_dataframe()
+    current_register_df = get_current_ship_register_dataframe()
+
+    new_indices = current_register_df.index.difference(
+        original_register_df.index
+    )
+
+
 def get_current_ship_register_dataframe() -> pd.DataFrame:
     return pd.DataFrame(
         st.session_state.ship_register_current, columns=all_columns
