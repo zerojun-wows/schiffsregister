@@ -76,6 +76,15 @@ def get_original_ship_register_dataframe() -> pd.DataFrame:
     )
 
 
+def get_removals_dataframe() -> pd.DataFrame:
+    original_register_df = get_original_ship_register_dataframe()
+    current_register_df = get_current_ship_register_dataframe()
+
+    deleted_indices = original_register_df.index.difference(
+        current_register_df.index
+    )
+
+
 def get_remove_ship_data():
     return st.session_state.remove_ship_data
 
