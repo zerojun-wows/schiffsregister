@@ -61,13 +61,10 @@ def get_modifications_dataframe() -> pd.DataFrame:
     original_register_df = get_original_ship_register_dataframe()
     current_register_df = get_current_ship_register_dataframe()
 
-    st.write(original_register_df)
-    st.write(current_register_df)
-
     common_indices = original_register_df.index.intersection(
         current_register_df.index
     )
-    st.write(common_indices)
+
     if not original_register_df.empty and not current_register_df.empty:
         original_subset = original_register_df.loc[common_indices]
         current_subset = current_register_df.loc[common_indices]
