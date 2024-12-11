@@ -83,6 +83,7 @@ def get_removals_dataframe() -> pd.DataFrame:
     deleted_indices = original_register_df.index.difference(
         current_register_df.index
     )
+    return original_register_df.loc[deleted_indices]
 
 
 def get_remove_ship_data():
