@@ -60,7 +60,9 @@ def get_current_ship_register_list() -> list:
 def get_modifications_dataframe() -> pd.DataFrame:
     original_register_df = get_original_ship_register_dataframe()
     current_register_df = get_current_ship_register_dataframe()
-
+    st.write("Debug 1")
+    st.dataframe(original_register_df)
+    st.dataframe(current_register_df)
     common_indices = original_register_df.index.intersection(
         current_register_df.index
     )
