@@ -4,6 +4,7 @@ from session_state_routines import (
     check_register_open,
     get_current_ship_register_dataframe,
     get_additions_dataframe,
+    get_modifications_dataframe,
 )
 
 st.title("Schiffsregister - Ansicht")
