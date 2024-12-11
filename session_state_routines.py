@@ -66,10 +66,10 @@ def get_modifications_dataframe() -> pd.DataFrame:
     common_indices = original_register_df.index.intersection(
         current_register_df.index
     )
-
-    return original_register_df[common_indices].compare(
-        current_register_df.loc[common_indices]
-    )
+    if not original_register_df.empty:
+        return original_register_df[common_indices].compare(
+            current_register_df.loc[common_indices]
+        )
 
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
