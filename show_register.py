@@ -32,7 +32,7 @@ else:
 # modifications
 st.subheader("Änderungen")
 
-if current_ship_register_df.empty:
+if current_ship_register_df.empty or get_modifications_dataframe().empty:
     st.info("Keine Änderungen vorhanden", icon=":material/info:")
 else:
     st.dataframe(get_modifications_dataframe())
