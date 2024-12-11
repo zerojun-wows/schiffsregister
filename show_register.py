@@ -25,7 +25,7 @@ st.subheader("Zugänge")
 if current_ship_register_df.empty:
     st.info("Keine Zugänge vorhanden", icon=":material/info:")
 else:
-    st.dataframe(get_additions_dataframe)
+    st.dataframe(get_additions_dataframe())
 
 st.subheader("Änderungen")
 

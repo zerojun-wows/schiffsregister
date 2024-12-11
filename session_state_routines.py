@@ -36,7 +36,7 @@ def clear_session_state() -> None:
         del st.session_state[key]
 
 
-def get_additions_dataframe() -> pd.Dataframe:
+def get_additions_dataframe() -> pd.DataFrame:
     original_register_df = get_original_ship_register_dataframe()
     current_register_df = get_current_ship_register_dataframe()
 
