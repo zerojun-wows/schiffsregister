@@ -3,6 +3,7 @@ import streamlit as st
 from session_state_routines import (
     check_register_open,
     get_current_ship_register_dataframe,
+    get_additions_dataframe,
 )
 
 st.title("Schiffsregister - Ansicht")
@@ -24,7 +25,8 @@ st.subheader("Zugänge")
 if current_ship_register_df.empty:
     st.info("Keine Zugänge vorhanden", icon=":material/info:")
 else:
-    
+    st.dataframe(get_additions_dataframe)
+
 st.subheader("Änderungen")
 
 # modifications
