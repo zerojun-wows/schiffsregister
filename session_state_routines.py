@@ -10,6 +10,12 @@ def add_ship_to_current_register(ship_data: dict) -> None:
     st.session_state.ship_register_current.append(ship_data)
 
 
+def calculate_order_values(df) -> None:
+    df["Ordnungswert_Nation"] = df["Nation"].map(nations_order_dict)
+    df["Ordnungswert_Klasse"] = df["Klasse"].map(ship_class_order_dict)
+    df["Ordnungswert_Stufe"] = df["Stufe"].map(ship_tier_order_dict)
+
+
 def check_register_open() -> None:
     if is_session_state_empty():
         st.info(
