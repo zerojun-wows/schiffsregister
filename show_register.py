@@ -66,4 +66,8 @@ st.subheader("Abgänge")
 if current_ship_register_df.empty or get_removals_dataframe().empty:
     st.info("Keine Abgänge vorhanden", icon=":material/info:")
 else:
-    st.dataframe(get_removals_dataframe())
+    st.dataframe(
+        get_removals_dataframe(),
+        use_container_width=True,
+        column_config=df_column_config,
+    )
