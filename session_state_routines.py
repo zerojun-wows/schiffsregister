@@ -64,7 +64,8 @@ def get_current_ship_register_dataframe() -> pd.DataFrame:
         st.session_state.ship_register_current, columns=all_columns
     )
     calculate_order_values(df)
-    so
+    sort_dataframe(df)
+    return df
 
 
 def get_current_ship_register_list() -> list:
@@ -263,11 +264,6 @@ def setup_session_state_for_remove_ship():
 
 def sort_dataframe(df) -> None:
     df.sort_values(
-        by=[
-            "Ordnungswert_Nation",
-            "Ordnungswert_Stufe",
-            "Ordnungswert_Klasse",
-            "Name",
-        ],
+        by=sort_field_order,
         inplace=True,
     )
