@@ -80,13 +80,13 @@ def get_modifications_dataframe() -> pd.DataFrame:
         current_register_df.index
     )
 
-    if not original_register_df.empty and not current_register_df.empty:
-        original_subset = original_register_df.loc[common_indices]
-        current_subset = current_register_df.loc[common_indices]
-
-        return original_subset.compare(current_subset)
-    else:
+    if original_register_df.empty or current_register_df.empty:
         return original_register_df
+
+    original_subset = original_register_df.loc[common_indices]
+    current_subset = current_register_df.loc[common_indices]
+
+    return original_subset.compare(current_subset)
 
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
