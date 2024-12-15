@@ -60,9 +60,11 @@ def get_additions_dataframe() -> pd.DataFrame:
 
 
 def get_current_ship_register_dataframe() -> pd.DataFrame:
-    return pd.DataFrame(
+    df = pd.DataFrame(
         st.session_state.ship_register_current, columns=all_columns
     )
+    calculate_order_values(df)
+    so
 
 
 def get_current_ship_register_list() -> list:
@@ -257,3 +259,15 @@ def setup_session_state_for_remove_ship():
 
     if "remove_ship_confirmation" not in st.session_state:
         st.session_state.remove_ship_confirmation = False
+
+
+def sort_dataframe(df) -> None:
+    df.sort_values(
+        by=[
+            "Ordnungswert_Nation",
+            "Ordnungswert_Stufe",
+            "Ordnungswert_Klasse",
+            "Name",
+        ],
+        inplace=True,
+    )
