@@ -30,7 +30,9 @@ current_ship_register_df = get_current_ship_register_dataframe()
 if current_ship_register_df.empty:
     st.info("Noch keine Einträge vorhanden", icon=":material/info:")
 else:
-    st.table(data=current_ship_register_df)  # , column_config=df_column_config
+    st.dataframe(
+        data=current_ship_register_df
+    )  # , column_config=df_column_config
 
 # additions
 st.subheader("Zugänge")
