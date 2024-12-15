@@ -86,13 +86,19 @@ def get_modifications_dataframe() -> pd.DataFrame:
     original_subset = original_register_df.loc[common_indices]
     current_subset = current_register_df.loc[common_indices]
 
-    return original_subset.compare(current_subset, align_axis=0)
+    return original_subset.compare(
+        current_subset,
+        align_axis=0,
+    )
 
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
-    return pd.DataFrame(
+    df = pd.DataFrame(
         st.session_state.ship_register_original, columns=all_columns
     )
+    calculate_order_values(df)
+    sort_dataframe(df)
+    return df
 
 
 def get_removals_dataframe() -> pd.DataFrame:
