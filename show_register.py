@@ -31,7 +31,7 @@ if current_ship_register_df.empty:
     st.info("Noch keine Einträge vorhanden", icon=":material/info:")
 else:
     st.dataframe(
-        data=current_ship_register_df
+        data=current_ship_register_df, use_container_width=True
     )  # , column_config=df_column_config
 
 # additions
