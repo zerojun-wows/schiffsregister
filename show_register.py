@@ -15,6 +15,8 @@ df_column_config = {
     "Stufe": "Stufe",
     "Name": "Name",
     "Ordnungswert_Nation": None,
+    "Ordnungswert_Klasse": None,
+    "Ordnungswert_Stufe": None,
 }
 
 st.title("Schiffsregister - Ansicht")
