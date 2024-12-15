@@ -9,10 +9,12 @@ from session_state_routines import (
 )
 
 df_column_config = {
-    "Nation": st.column_config.TextColumn("Nation"),
-    "Typ": st.column_config.TextColumn("Typ", width=None),
-    "Klasse": st.column_config.TextColumn("Klasse", width=None),
-    "Stufe": st.column_config.TextColumn("Stufe"),
+    "Nation": "Nation",
+    "Typ": "Typ",
+    "Klasse": "Klasse",
+    "Stufe": "Stufe",
+    "Name": "Name",
+    "Ordnungswert_Nation": None,
 }
 
 st.title("Schiffsregister - Ansicht")
