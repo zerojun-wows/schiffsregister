@@ -11,6 +11,7 @@ from session_state_routines import (
 df_column_config = {
     "Nation": st.column_config.TextColumn("Nation", width=None),
     "Typ": st.column_config.TextColumn("Typ", width=None),
+    "Klasse": st.column_config.TextColumn("Watt", width=None),
 }
 
 st.title("Schiffsregister - Ansicht")
