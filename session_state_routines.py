@@ -3,7 +3,12 @@ This module contains interaction routines with st.session_state
 """
 import pandas as pd
 import streamlit as st
-from data_config import all_columns
+from data_config import (
+    all_columns,
+    nations_order_dict,
+    class_order_dict,
+    tier_order_dict,
+)
 
 
 def add_ship_to_current_register(ship_data: dict) -> None:
