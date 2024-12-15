@@ -42,7 +42,11 @@ st.subheader("Zugänge")
 if current_ship_register_df.empty or get_additions_dataframe().empty:
     st.info("Keine Zugänge vorhanden", icon=":material/info:")
 else:
-    st.dataframe(get_additions_dataframe())
+    st.dataframe(
+        get_additions_dataframe(),
+        use_container_width=True,
+        column_config=df_column_config,
+    )
 
 # modifications
 st.subheader("Änderungen")
@@ -50,7 +54,11 @@ st.subheader("Änderungen")
 if current_ship_register_df.empty or get_modifications_dataframe().empty:
     st.info("Keine Änderungen vorhanden", icon=":material/info:")
 else:
-    st.dataframe(get_modifications_dataframe())
+    st.dataframe(
+        get_modifications_dataframe(),
+        use_container_width=True,
+        column_config=df_column_config,
+    )
 
 # removals
 st.subheader("Abgänge")
