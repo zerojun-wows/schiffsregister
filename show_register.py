@@ -8,6 +8,10 @@ from session_state_routines import (
     get_removals_dataframe,
 )
 
+df_column_config = {
+    "Nation": st.column_config.TextColumn(),
+}
+
 st.title("Schiffsregister - Ansicht")
 
 check_register_open()
@@ -19,7 +23,7 @@ current_ship_register_df = get_current_ship_register_dataframe()
 if current_ship_register_df.empty:
     st.info("Noch keine Einträge vorhanden", icon=":material/info:")
 else:
-    st.dataframe(current_ship_register_df)
+    st.dataframe(current_ship_register_df, column_config=df_column_config)
 
 # additions
 st.subheader("Zugänge")
