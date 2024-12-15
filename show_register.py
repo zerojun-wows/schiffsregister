@@ -9,7 +9,7 @@ from session_state_routines import (
 )
 
 df_column_config = {
-    "Nation": "Nation",
+    "Nation": "Nation         ",
     "Typ": "Typ",
     "Klasse": "Klasse",
     "Stufe": "Stufe",
