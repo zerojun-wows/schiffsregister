@@ -9,7 +9,8 @@ from session_state_routines import (
 )
 
 df_column_config = {
-    "Nation": st.column_config.TextColumn(),
+    "Nation": st.column_config.TextColumn(width=None),
+    "Typ": st.column_config.TextColumn(width=None),
 }
 
 st.title("Schiffsregister - Ansicht")
