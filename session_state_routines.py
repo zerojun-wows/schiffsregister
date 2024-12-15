@@ -86,7 +86,7 @@ def get_modifications_dataframe() -> pd.DataFrame:
     original_subset = original_register_df.loc[common_indices]
     current_subset = current_register_df.loc[common_indices]
 
-    return original_subset.compare(current_subset)
+    return original_subset.compare(current_subset, align_axis=0)
 
 
 def get_original_ship_register_dataframe() -> pd.DataFrame:
