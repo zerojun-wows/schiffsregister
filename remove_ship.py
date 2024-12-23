@@ -70,5 +70,3 @@ if selected_ship_data := get_remove_ship_data():
         set_remove_ship_confirmation(False)
         clear_remove_ship_index()
         st.rerun()
-
-st.write(st.session_state)

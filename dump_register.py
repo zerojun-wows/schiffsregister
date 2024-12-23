@@ -24,5 +24,3 @@ st.download_button(
     file_name=f'{time.strftime("%Y_%m_%d-%H_%M")}-Schiffsregister.csv',
     mime="text/csv",
 )
-
-st.write(st.session_state)
